@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import {
+  getAllTags,
+  getPublishedNotes,
+  getPublishedPosts,
+  type Note,
+  type Post,
+} from '../../lib/content';
+import { slugifyTag } from '../../lib/format';
+
+interface Props {
+  tag: string;
+  posts: Post[];
+  notes: Note[];
+}
+
+export async function getStaticPaths() {
+  const [tags, posts, notes] = await Promise.all([
+    getAllTags(),
+    getPublishedPosts(),
+    getPublishedNotes(),
+  ]);
+
+  // Entries are matched on the slug rather than the raw tag, so the routes here
+  // and the links `TagList` writes agree by construction.
+  const carries = (entry: Post | Note, slug: string): boolean =>
+    entry.data.tags.some((tag) => slugifyTag(tag) === slug);
+
+  // Two distinct tags could in principle slugify alike; the first one wins the
+  // route rather than crashing the build on a duplicate path.
+  const displayTag = new Map<string, string>();
+  for (const { tag } of tags) {
+    const slug = slugifyTag(tag);
+    if (!displayTag.has(slug)) displayTag.set(slug, tag);
+  }
+
+  return [...displayTag].map(([slug, tag]) => ({
+    params: { tag: slug },
+    props: {
+      tag,
+      posts: posts.filter((entry) => carries(entry, slug)),
+      notes: notes.filter((entry) => carries(entry, slug)),
+    },
+  }));
+}
+
+const { tag, posts, notes } = Astro.props;
+
+const total = posts.length + notes.length;
+const description = `Writing and notes tagged #${tag} — ${total} ${total === 1 ? 'entry' : 'entries'}.`;
+---
+
+<BaseLayout title={`#${tag}`} description={description}>
+  <div class="container page">
+    <header class="page-header">
+      <p class="label kind">§ tag</p>
+      <h1>#{tag}</h1>
+      <p class="intro">
+        {total}
+        {total === 1 ? 'entry' : 'entries'}
+      </p>
+    </header>
+
+    {
+      posts.length > 0 && (
+        <section class="group">
+          <SectionHeading label="§ writing" />
+          <PostList entries={posts} collection="posts" showDescription />
+        </section>
+      )
+    }
+
+    {
+      notes.length > 0 && (
+        <section class="group">
+          <SectionHeading label="§ notes" />
+          <PostList entries={notes} collection="notes" />
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .page-header {
+    max-width: var(--measure);
+    margin-bottom: var(--space-12);
+  }
+
+  .kind {
+    color: var(--color-accent-2);
+  }
+
+  h1 {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xl);
+    letter-spacing: -0.01em;
+  }
+
+  .intro {
+    margin-top: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  .group + .group {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-rule);
+  }
+</style>

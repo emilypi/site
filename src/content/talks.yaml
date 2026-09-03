@@ -1,0 +1,109 @@
+# Talks, papers, and workshops shown on /talks/. Each item needs a unique `id`.
+
+- id: type-arithmetic-yoneda
+  title: Type Arithmetic and the Yoneda Perspective
+  kind: talk
+  venue: Scala World 2019
+  # The conference ran 2019-08-31 to 2019-09-04 at the Rheged Centre, Redhills.
+  # The exact day of this talk is not published anywhere I could find; the slide
+  # repo's "final" commit lands on the morning of 2019-09-03.
+  # TODO(emily): confirm the day you actually gave it.
+  date: 2019-09-03
+  # TODO(emily): the Scala World recording is titled "Type Arithmetic and the
+  # Yoneda Lemma", not "...Perspective". Pick whichever title you want to keep.
+  slides: https://github.com/cohomolo-gy/Type-Arithmetic-and-the-Yoneda-Perspective
+  video: https://www.youtube.com/watch?v=aXS5HZ_1fNQ
+  coauthors: []
+
+- id: isomorphic-reasoning-lambdaconf-2019
+  title: 'Isomorphic Reasoning: Counting with Types'
+  kind: workshop
+  venue: LambdaConf 2019
+  # LambdaConf 2019 ran 2019-06-05 to 2019-06-07 in Boulder. The workshop was a
+  # day-long session, recorded in three parts; the exact day is not published.
+  # TODO(emily): confirm the day.
+  date: 2019-06-05
+  slides: https://github.com/cohomolo-gy/Isomorphic-Reasoning
+  # Part 1. Part 2: https://www.youtube.com/watch?v=UScWv37aJhY
+  #         Part 3: https://www.youtube.com/watch?v=kKZTd7D33KY
+  video: https://www.youtube.com/watch?v=ApHFidwNypE
+  coauthors:
+    - Alexander Konovalov
+  abstract: >-
+    A day-long workshop on counting the inhabitants of types and reasoning
+    with the isomorphisms between them. Recorded in three parts.
+
+- id: categorical-view-lambdaconf-2019
+  title: A Categorical View of Adjunctions, Free Constructions, and Profunctor Optics
+  kind: talk
+  venue: LambdaConf 2019
+  # TODO(emily): confirm the day (conference ran 2019-06-05 to 2019-06-07).
+  date: 2019-06-06
+  video: https://www.youtube.com/watch?v=ondYG33qfUQ
+  coauthors: []
+
+- id: semibug-2023
+  # TODO(emily): the announcement only says "a presentation on Haskell"; give
+  # the talk its real title, and add slides or a recording if either exists.
+  title: A Presentation on Haskell
+  kind: talk
+  venue: SEMIBUG (SouthEast Michigan BSD User Group), online
+  date: 2023-03-21
+  url: https://lists.nycbug.org:8443/pipermail/semibug/2023-March/000797.html
+  coauthors: []
+
+- id: hulk-smash-haskell-love-2020
+  title: 'Hulk SMASH: re-imagining the Maybe-monad and its design space'
+  kind: talk
+  # Haskell Love 2020 ran online on 2020-07-31 and 2020-08-01; the recording was
+  # published on 2020-08-13. TODO(emily): confirm the day.
+  venue: Haskell Love 2020, online
+  date: 2020-07-31
+  video: https://www.youtube.com/watch?v=4aQlFMvKgdc
+  coauthors: []
+
+- id: haskell-foundation-zurihac-2021
+  title: Haskell Foundation Progress Update
+  kind: talk
+  venue: ZuriHac 2021
+  date: 2021-06-19
+  video: https://www.youtube.com/watch?v=6uI9fWvHiec
+  coauthors: []
+
+- id: effective-haskell-goto-2024
+  title: 'Effective Haskell: a conversation with Rebecca Skinner'
+  kind: panel
+  venue: GOTO Book Club, 2024
+  # Published 2024-04-05 as GOTO Book Club season 4, episode 14.
+  date: 2024-04-05
+  video: https://www.youtube.com/watch?v=kOyVxj7p4lI
+  coauthors:
+    - Rebecca Skinner
+  abstract: >-
+    A conversation about Rebecca Skinner's book Effective Haskell: solving
+    practical problems with monad transformers and type families, and the
+    pitfalls to avoid along the way.
+
+- id: compositionality-2024
+  title: Profunctor Optics, a Categorical Update
+  kind: paper
+  venue: Compositionality, vol. 6 (2024)
+  date: 2024-02-23
+  url: https://doi.org/10.32408/compositionality-6-1
+  coauthors:
+    - Bryce Clarke
+    - Derek Elkins
+    - Jeremy Gibbons
+    - Fosco Loregiàn
+    - Bartosz Milewski
+    - Mario Román
+  abstract: >-
+    Optics are bidirectional data accessors that capture data transformation
+    patterns such as accessing subfields or iterating over containers.
+    Profunctor optics are a particular choice of representation supporting
+    modularity, meaning that we can construct accessors for complex structures
+    by combining simpler ones.
+
+# TODO(emily): program committees (ICFP Haskell Implementors' Workshop 2021 and
+# 2025) are mentioned on the About page but are not listed here. Add them as
+# entries if you want them on /talks/.

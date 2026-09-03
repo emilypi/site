@@ -1,0 +1,383 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "titleCount": 1,
+      "title": "cohomolo.gy",
+      "description": "Engineer and mathematician writing about type theory, AI, and the strange future.",
+      "canonical": "https://cohomolo.gy/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/posts/",
+      "titleCount": 1,
+      "title": "Writing · cohomolo.gy",
+      "description": "Essays by Emily Pillmore on type theory, Haskell, and the mathematics under learning machines.",
+      "canonical": "https://cohomolo.gy/posts/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/posts/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/posts/kitchen-sink/",
+      "titleCount": 1,
+      "title": "Typesetting notes: how math and code look here · cohomolo.gy",
+      "description": "A reference page that exercises every rendering feature this site has — display math, aligned environments, syntax highlighting in five languages, callouts, figures, footnotes, and the awkward cases like overflowing code.",
+      "canonical": "https://cohomolo.gy/posts/kitchen-sink/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "article",
+      "ogImage": "https://cohomolo.gy/og/posts/kitchen-sink.png",
+      "ogUrl": "https://cohomolo.gy/posts/kitchen-sink/",
+      "articlePublished": "2026-09-03T00:00:00.000Z",
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/notes/",
+      "titleCount": 1,
+      "title": "Notes · cohomolo.gy",
+      "description": "Short notes by Emily Pillmore — fragments and single ideas that do not need an essay around them.",
+      "canonical": "https://cohomolo.gy/notes/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/notes/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/notes/what-notes-are-for/",
+      "titleCount": 1,
+      "title": "What notes are for · cohomolo.gy",
+      "description": "Notes are the short-form stream — fragments, things I learned today, single ideas that do not need an argument around them. Posts are for essays.",
+      "canonical": "https://cohomolo.gy/notes/what-notes-are-for/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "article",
+      "ogImage": "https://cohomolo.gy/og/notes/what-notes-are-for.png",
+      "ogUrl": "https://cohomolo.gy/notes/what-notes-are-for/",
+      "articlePublished": "2026-09-03T00:00:00.000Z",
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/tags/",
+      "titleCount": 1,
+      "title": "Tags · cohomolo.gy",
+      "description": "Every tag across the writing and notes on cohomolo.gy, ordered by how often it is used.",
+      "canonical": "https://cohomolo.gy/tags/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/tags/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/tags/meta/",
+      "titleCount": 1,
+      "title": "#meta · cohomolo.gy",
+      "description": "Writing and notes tagged #meta — 2 entries.",
+      "canonical": "https://cohomolo.gy/tags/meta/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/tags/meta/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/tags/typesetting/",
+      "titleCount": 1,
+      "title": "#typesetting · cohomolo.gy",
+      "description": "Writing and notes tagged #typesetting — 1 entry.",
+      "canonical": "https://cohomolo.gy/tags/typesetting/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/tags/typesetting/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/projects/",
+      "titleCount": 1,
+      "title": "Projects · cohomolo.gy",
+      "description": "Open-source projects by Emily Pillmore: Haskell libraries on Hackage, research organisations, and reading collections.",
+      "canonical": "https://cohomolo.gy/projects/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/projects/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/talks/",
+      "titleCount": 1,
+      "title": "Talks · cohomolo.gy",
+      "description": "Talks, papers, and workshops by Emily Pillmore on Haskell, category theory, and compositionality.",
+      "canonical": "https://cohomolo.gy/talks/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/talks/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/about/",
+      "titleCount": 1,
+      "title": "About · cohomolo.gy",
+      "description": "Emily Pillmore — engineer and mathematician. Haskell, optics, type theory, and the mathematics under learning machines.",
+      "canonical": "https://cohomolo.gy/about/",
+      "canonicalAbsolute": true,
+      "canonicalTrailingSlash": true,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": null,
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/about/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    },
+    {
+      "route": "/404.html",
+      "titleCount": 1,
+      "title": "Not found · cohomolo.gy",
+      "description": "That page is not here. Try the writing index or the front page.",
+      "canonical": null,
+      "canonicalAbsolute": null,
+      "canonicalTrailingSlash": null,
+      "rssAlternate": "https://cohomolo.gy/rss.xml",
+      "robots": "noindex",
+      "ogType": "website",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "ogUrl": "https://cohomolo.gy/404/",
+      "articlePublished": null,
+      "articleModified": null,
+      "themeColorCount": 2,
+      "scriptTags": [
+        "(bare inline)",
+        "(bare inline)"
+      ],
+      "externalScriptSrc": []
+    }
+  ],
+  "ogImageChecks": [
+    {
+      "route": "/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/posts/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/posts/kitchen-sink/",
+      "ogImage": "https://cohomolo.gy/og/posts/kitchen-sink.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/notes/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/notes/what-notes-are-for/",
+      "ogImage": "https://cohomolo.gy/og/notes/what-notes-are-for.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/tags/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/tags/meta/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/tags/typesetting/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/projects/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/talks/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/about/",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    },
+    {
+      "route": "/404.html",
+      "ogImage": "https://cohomolo.gy/og/default.png",
+      "exists": true,
+      "dims": "1200x630"
+    }
+  ],
+  "sitemapIndexChildren": [
+    "https://cohomolo.gy/sitemap-0.xml"
+  ],
+  "sitemapUrls": [
+    "https://cohomolo.gy/",
+    "https://cohomolo.gy/about/",
+    "https://cohomolo.gy/notes/",
+    "https://cohomolo.gy/notes/what-notes-are-for/",
+    "https://cohomolo.gy/posts/",
+    "https://cohomolo.gy/posts/kitchen-sink/",
+    "https://cohomolo.gy/projects/",
+    "https://cohomolo.gy/tags/",
+    "https://cohomolo.gy/tags/meta/",
+    "https://cohomolo.gy/tags/typesetting/",
+    "https://cohomolo.gy/talks/"
+  ],
+  "sitemapMissingRoutes": [],
+  "sitemapExtraUrls": [],
+  "robots": "User-agent: *\nAllow: /\nSitemap: https://cohomolo.gy/sitemap-index.xml\n",
+  "robotsMentionsSitemap": true,
+  "rss": {
+    "wellFormed": "yes",
+    "itemCount": 2,
+    "items": [
+      {
+        "title": "Typesetting notes: how math and code look here",
+        "link": "https://cohomolo.gy/posts/kitchen-sink/",
+        "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT"
+      },
+      {
+        "title": "What notes are for",
+        "link": "https://cohomolo.gy/notes/what-notes-are-for/",
+        "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT"
+      }
+    ],
+    "nonAbsoluteLinks": [],
+    "noTrailingSlash": [],
+    "badPubDate": [],
+    "channelLink": "https://cohomolo.gy/",
+    "hasAtomSelf": false
+  }
+}

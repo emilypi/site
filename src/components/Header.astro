@@ -1,0 +1,140 @@
+---
+import { SITE } from '../site.config';
+import ThemeToggle from './ThemeToggle.astro';
+
+const pathname = Astro.url.pathname;
+const isCurrent = (href: string): boolean => pathname === href || pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="wordmark" href="/">
+      <span class="mark">∂</span><span class="name">cohomolo.gy</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul>
+        {
+          SITE.nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="toggle">
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-4);
+    padding-block: var(--space-4);
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .mark {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--color-accent);
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .name {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: -0.01em;
+  }
+
+  .wordmark:hover .mark {
+    color: var(--color-accent-2);
+  }
+
+  nav {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-6);
+    white-space: nowrap;
+  }
+
+  nav a {
+    display: inline-block;
+    padding-block: var(--space-1);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition:
+      color var(--dur) var(--ease-out),
+      border-color var(--dur) var(--ease-out);
+  }
+
+  nav a:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--color-rule);
+  }
+
+  nav a[aria-current='page'] {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent-2);
+  }
+
+  @media (max-width: 40rem) {
+    .inner {
+      grid-template-columns: 1fr auto;
+      gap: var(--space-2);
+      padding-block: var(--space-3);
+    }
+
+    .toggle {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    nav {
+      grid-column: 1 / -1;
+      margin-inline: calc(var(--gutter) * -1);
+      padding-inline: var(--gutter);
+    }
+
+    ul {
+      justify-content: flex-start;
+      gap: var(--space-4);
+      padding-bottom: var(--space-1);
+    }
+  }
+</style>

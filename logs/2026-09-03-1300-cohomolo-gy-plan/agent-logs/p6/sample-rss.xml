@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>cohomolo.gy</title><description>Engineer and mathematician writing about type theory, AI, and the strange future.</description><link>https://cohomolo.gy/</link><language>en</language><item><title>A short note</title><link>https://cohomolo.gy/notes/zz-og-note/</link><guid isPermaLink="true">https://cohomolo.gy/notes/zz-og-note/</guid><description>One paragraph, no ceremony.</description><pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Just a note.&lt;/p&gt;
+</content:encoded><category>misc</category><author>emilypi@cohomolo.gy (Emily Pillmore)</author></item><item><title>Optics from first principles</title><link>https://cohomolo.gy/posts/zz-og-test/</link><guid isPermaLink="true">https://cohomolo.gy/posts/zz-og-test/</guid><description>Lenses, prisms, and traversals fall out of one idea once you stop memorising the types.</description><pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Heading one&lt;/h1&gt;
+&lt;p&gt;A paragraph with &lt;em&gt;emphasis&lt;/em&gt;, &lt;strong&gt;strong&lt;/strong&gt;, &lt;code&gt;code&lt;/code&gt;, a &lt;a href=&quot;https://example.com/&quot;&gt;link&lt;/a&gt;, and inline
+maths $\int_0^1 x^2\,dx$ that stays as source in the feed.&lt;/p&gt;
+&lt;p&gt;$$
+H^n(X; \mathbb{Z}) \cong \mathrm{Hom}(H_n(X), \mathbb{Z})
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one&lt;/li&gt;
+&lt;li&gt;two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;newtype Lens s a = Lens { runLens :: forall f. Functor f =&amp;gt; (a -&amp;gt; f a) -&amp;gt; s -&amp;gt; f s }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&quot;/img/x.png&quot; alt=&quot;a diagram&quot; /&gt;</content:encoded><category>haskell</category><category>optics</category><author>emilypi@cohomolo.gy (Emily Pillmore)</author></item><item><title>On the cohomology of very long titles that refuse to end and keep going well past any reasonable limit for a card</title><link>https://cohomolo.gy/posts/zz-og-test-long/</link><guid isPermaLink="true">https://cohomolo.gy/posts/zz-og-test-long/</guid><description>A deliberately overlong description used to exercise the two-line character budget in the Open Graph card renderer, which should truncate this sentence somewhere before it finishes running its course entirely.</description><pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Component prose that should survive the strip.&lt;/p&gt;
+&lt;p&gt;Regular markdown after the component, on {SITE.title}.&lt;/p&gt;
+</content:encoded><category>geometry</category><category>type-theory</category><category>category-theory</category><category>extra-tag</category><author>emilypi@cohomolo.gy (Emily Pillmore)</author></item></channel></rss>

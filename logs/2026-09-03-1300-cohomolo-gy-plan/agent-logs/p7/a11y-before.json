@@ -1,0 +1,1638 @@
+{
+  "axe": [
+    {
+      "scheme": "dark",
+      "path": "/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".posts > li[data-astro-cid-oxezsu4a=\"\"] > .date[data-astro-cid-oxezsu4a=\"\"] > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".notes > li[data-astro-cid-oxezsu4a=\"\"] > .date[data-astro-cid-oxezsu4a=\"\"] > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(1) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(2) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(3) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 7
+    },
+    {
+      "scheme": "dark",
+      "path": "/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "li:nth-child(1) > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "span[data-astro-cid-sgg5joot=\"\"]:nth-child(3)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"meta/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"typesetting/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".toc-sticky > .toc[aria-label=\"Contents\"] > ol > li:nth-child(1) > .sub > li > a[href$=\"#a-third-level-heading\"][data-astro-cid-p33bl5ka=\"\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 7
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "id": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "nodes": [
+        {
+          "target": ".task-list-item:nth-child(1) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(2) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(3) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(4) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+        {
+          "target": "a[href$=\"#user-content-fnref-1\"]",
+          "summary": "Fix any of the following: The link has insufficient color contrast of 1.28:1 with the surrounding text. (Minimum contrast is 3:1, link text: #8fb3ff, surrounding text: #9a9db0) The link has no styling (such as underline) to distinguish it from the surrounding "
+        },
+        {
+          "target": "a[href$=\"#user-content-fnref-2\"]",
+          "summary": "Fix any of the following: The link has insufficient color contrast of 1.28:1 with the surrounding text. (Minimum contrast is 3:1, link text: #8fb3ff, surrounding text: #9a9db0) The link has no styling (such as underline) to distinguish it from the surrounding "
+        }
+      ],
+      "nodeCount": 2
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 3
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/what-notes-are-for/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "span:nth-child(3)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"meta/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 5
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 2
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/meta/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".intro",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".posts > li[data-astro-cid-oxezsu4a=\"\"] > .date > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".notes > li[data-astro-cid-oxezsu4a=\"\"] > .date > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 5
+    },
+    {
+      "scheme": "dark",
+      "path": "/projects/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > .grid > li > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > .grid > li > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(4) > .grid > li:nth-child(1) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(2) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(3) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(4) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #626678, background color: #12151f, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 13
+    },
+    {
+      "scheme": "dark",
+      "path": "/projects/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > .grid > li > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "dark",
+      "path": "/talks/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(2) > ol > .talk > .meta > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time[datetime=\"2024-02-23T00:00:00.000Z\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > ol > .talk > .meta > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time[datetime=\"2019-09-03T00:00:00.000Z\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 8
+    },
+    {
+      "scheme": "dark",
+      "path": "/about/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 2
+    },
+    {
+      "scheme": "dark",
+      "path": "/404.html",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.41 (foreground color: #626678, background color: #0b0d14, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 2
+    },
+    {
+      "scheme": "light",
+      "path": "/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".posts > li[data-astro-cid-oxezsu4a=\"\"] > .date[data-astro-cid-oxezsu4a=\"\"] > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".notes > li[data-astro-cid-oxezsu4a=\"\"] > .date[data-astro-cid-oxezsu4a=\"\"] > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(1) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8d90a0, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(1) > article > footer > .status.maintained",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.94 (foreground color: #0f8f7a, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(2) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8d90a0, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(2) > article > footer > .status.maintained",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.94 (foreground color: #0f8f7a, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 10
+    },
+    {
+      "scheme": "light",
+      "path": "/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "li:nth-child(1) > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 5
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "span[data-astro-cid-sgg5joot=\"\"]:nth-child(3)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"meta/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"typesetting/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(1) > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 48
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "id": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "nodes": [
+        {
+          "target": ".task-list-item:nth-child(1) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(2) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(3) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(4) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+        {
+          "target": "a[href$=\"#user-content-fnref-1\"]",
+          "summary": "Fix any of the following: The link has insufficient color contrast of 1.02:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3552c9, surrounding text: #5b5e70) The link has no styling (such as underline) to distinguish it from the surrounding "
+        },
+        {
+          "target": "a[href$=\"#user-content-fnref-2\"]",
+          "summary": "Fix any of the following: The link has insufficient color contrast of 1.02:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3552c9, surrounding text: #5b5e70) The link has no styling (such as underline) to distinguish it from the surrounding "
+        }
+      ],
+      "nodeCount": 2
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".label",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/what-notes-are-for/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".label",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "span:nth-child(3)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "a[href$=\"meta/\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 6
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 3
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/meta/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".intro",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".posts > li[data-astro-cid-oxezsu4a=\"\"] > .date > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".notes > li[data-astro-cid-oxezsu4a=\"\"] > .date > time",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 6
+    },
+    {
+      "scheme": "light",
+      "path": "/projects/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(2) > .grid > li > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8d90a0, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".active",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.94 (foreground color: #0f8f7a, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > .grid > li > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8d90a0, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(4) > .grid > li:nth-child(1) > article > footer > .role",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #8d90a0, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "li:nth-child(1) > article > footer > .maintained.status",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.94 (foreground color: #0f8f7a, background color: #fffdf7, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 23
+    },
+    {
+      "scheme": "light",
+      "path": "/projects/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > .grid > li > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "light",
+      "path": "/talks/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(2) > h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(2) > ol > .talk > .meta > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "time[datetime=\"2024-02-23T00:00:00.000Z\"]",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > h2",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "section:nth-child(3) > ol > .talk > .meta > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 9
+    },
+    {
+      "scheme": "light",
+      "path": "/about/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".kind",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 3
+    },
+    {
+      "scheme": "light",
+      "path": "/404.html",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": ".label",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 3.65 (foreground color: #0f8f7a, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".sign-off",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": ".colophon",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 2.88 (foreground color: #8d90a0, background color: #f7f4ec, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 3
+    }
+  ],
+  "semantics": [
+    {
+      "scheme": "dark",
+      "path": "/",
+      "h1Count": 1,
+      "h1Text": [
+        "Engineer and mathematician writing about type theory, AI, an"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 9,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/",
+      "h1Count": 1,
+      "h1Text": [
+        "Writing"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "h1Count": 1,
+      "h1Text": [
+        "Typesetting notes: how math and code look here"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "Contents",
+        "More writing",
+        "Contents"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 1,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 4,
+      "svgCount": 12,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/",
+      "h1Count": 1,
+      "h1Text": [
+        "Notes"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/what-notes-are-for/",
+      "h1Count": 1,
+      "h1Text": [
+        "What notes are for"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "More writing"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/",
+      "h1Count": 1,
+      "h1Text": [
+        "Tags"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/meta/",
+      "h1Count": 1,
+      "h1Text": [
+        "#meta"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/projects/",
+      "h1Count": 1,
+      "h1Text": [
+        "Projects"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/talks/",
+      "h1Count": 1,
+      "h1Text": [
+        "Talks"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H2",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/about/",
+      "h1Count": 1,
+      "h1Text": [
+        "About"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/404.html",
+      "h1Count": 1,
+      "h1Text": [
+        "This page has no boundary."
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/",
+      "h1Count": 1,
+      "h1Text": [
+        "Engineer and mathematician writing about type theory, AI, an"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 9,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/",
+      "h1Count": 1,
+      "h1Text": [
+        "Writing"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "h1Count": 1,
+      "h1Text": [
+        "Typesetting notes: how math and code look here"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "Contents",
+        "More writing",
+        "Contents"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 1,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 4,
+      "svgCount": 12,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/",
+      "h1Count": 1,
+      "h1Text": [
+        "Notes"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/what-notes-are-for/",
+      "h1Count": 1,
+      "h1Text": [
+        "What notes are for"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "More writing"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/",
+      "h1Count": 1,
+      "h1Text": [
+        "Tags"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/meta/",
+      "h1Count": 1,
+      "h1Text": [
+        "#meta"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/projects/",
+      "h1Count": 1,
+      "h1Text": [
+        "Projects"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/talks/",
+      "h1Count": 1,
+      "h1Text": [
+        "Talks"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H2",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/about/",
+      "h1Count": 1,
+      "h1Text": [
+        "About"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/404.html",
+      "h1Count": 1,
+      "h1Text": [
+        "This page has no boundary."
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    }
+  ]
+}

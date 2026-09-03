@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { getPublishedPosts, type Post } from '../../lib/content';
+
+const INTRO =
+  'Essays, mostly long: type theory, Haskell, and the mathematics sitting under learning machines.';
+const DESCRIPTION =
+  'Essays by Emily Pillmore on type theory, Haskell, and the mathematics under learning machines.';
+
+interface YearGroup {
+  year: number;
+  entries: Post[];
+}
+
+/**
+ * Bucket posts by publication year, newest year first, each bucket keeping the
+ * date-descending order it arrived in.
+ *
+ * Years are read in UTC to match `formatDate`, so a post dated `2026-01-01`
+ * files under 2026 wherever the site is built.
+ */
+function groupByYear(entries: Post[]): YearGroup[] {
+  const years = new Map<number, Post[]>();
+
+  for (const entry of entries) {
+    const year = entry.data.date.getUTCFullYear();
+    const bucket = years.get(year);
+    if (bucket) bucket.push(entry);
+    else years.set(year, [entry]);
+  }
+
+  return [...years.entries()]
+    .map(([year, group]) => ({ year, entries: group }))
+    .sort((a, b) => b.year - a.year);
+}
+
+const groups = groupByYear(await getPublishedPosts());
+---
+
+<BaseLayout title="Writing" description={DESCRIPTION}>
+  <div class="container page">
+    <header class="page-header">
+      <p class="label kind">§ writing</p>
+      <h1>Writing</h1>
+      <p class="intro">{INTRO}</p>
+      <p class="label"><a class="link-plain" href="/tags/">browse by tag →</a></p>
+    </header>
+
+    {
+      groups.length > 0 ? (
+        groups.map((group) => (
+          <section class="year">
+            <h2 class="label year-label">{group.year}</h2>
+            <PostList entries={group.entries} collection="posts" showDescription />
+          </section>
+        ))
+      ) : (
+        <div class="prose">
+          <p>Nothing here yet.</p>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .page-header {
+    max-width: var(--measure);
+    margin-bottom: var(--space-12);
+  }
+
+  .kind {
+    color: var(--color-accent-2);
+  }
+
+  h1 {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    letter-spacing: -0.015em;
+  }
+
+  .intro {
+    margin-top: var(--space-4);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  .year + .year {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .year-label {
+    margin-bottom: var(--space-6);
+    color: var(--color-text-faint);
+  }
+</style>

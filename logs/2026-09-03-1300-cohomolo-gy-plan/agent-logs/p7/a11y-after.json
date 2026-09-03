@@ -1,0 +1,1012 @@
+{
+  "axe": [
+    {
+      "scheme": "dark",
+      "path": "/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "li:nth-child(1) > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "id": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "nodes": [
+        {
+          "target": ".task-list-item:nth-child(1) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(2) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(3) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(4) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "dark",
+      "path": "/projects/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > .grid > li > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "light",
+      "path": "/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "li:nth-child(1) > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(1) > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(1) > span:nth-child(2)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(1) > span:nth-child(9)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(1) > span:nth-child(11)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(3) > span:nth-child(1)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": "pre[data-language=\"haskell\"]:nth-child(19) > code > .line:nth-child(3) > span:nth-child(2)",
+          "summary": "Fix any of the following: Element has insufficient color contrast of 4.49 (foreground color: #d73a49, background color: #fffdf7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 39
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "id": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "nodes": [
+        {
+          "target": ".task-list-item:nth-child(1) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(2) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(3) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        },
+        {
+          "target": ".task-list-item:nth-child(4) > input",
+          "summary": "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or reference"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "scheme": "light",
+      "path": "/projects/",
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "target": "section:nth-child(2) > .grid > li > article > h3",
+          "summary": "Fix any of the following: Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    }
+  ],
+  "semantics": [
+    {
+      "scheme": "dark",
+      "path": "/",
+      "h1Count": 1,
+      "h1Text": [
+        "Engineer and mathematician writing about type theory, AI, an"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 9,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/",
+      "h1Count": 1,
+      "h1Text": [
+        "Writing"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/posts/kitchen-sink/",
+      "h1Count": 1,
+      "h1Text": [
+        "Typesetting notes: how math and code look here"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "Contents",
+        "More writing",
+        "Contents"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 1,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 4,
+      "svgCount": 12,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/",
+      "h1Count": 1,
+      "h1Text": [
+        "Notes"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/notes/what-notes-are-for/",
+      "h1Count": 1,
+      "h1Text": [
+        "What notes are for"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "More writing"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/",
+      "h1Count": 1,
+      "h1Text": [
+        "Tags"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/tags/meta/",
+      "h1Count": 1,
+      "h1Text": [
+        "#meta"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/projects/",
+      "h1Count": 1,
+      "h1Text": [
+        "Projects"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/talks/",
+      "h1Count": 1,
+      "h1Text": [
+        "Talks"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H2",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/about/",
+      "h1Count": 1,
+      "h1Text": [
+        "About"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "dark",
+      "path": "/404.html",
+      "h1Count": 1,
+      "h1Text": [
+        "This page has no boundary."
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "false",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/",
+      "h1Count": 1,
+      "h1Text": [
+        "Engineer and mathematician writing about type theory, AI, an"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 9,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/",
+      "h1Count": 1,
+      "h1Text": [
+        "Writing"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/posts/kitchen-sink/",
+      "h1Count": 1,
+      "h1Text": [
+        "Typesetting notes: how math and code look here"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2",
+        "H2"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "Contents",
+        "More writing",
+        "Contents"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 1,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 4,
+      "svgCount": 12,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/",
+      "h1Count": 1,
+      "h1Text": [
+        "Notes"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/notes/what-notes-are-for/",
+      "h1Count": 1,
+      "h1Text": [
+        "What notes are for"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary",
+        "More writing"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/",
+      "h1Count": 1,
+      "h1Text": [
+        "Tags"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/tags/meta/",
+      "h1Count": 1,
+      "h1Text": [
+        "#meta"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/projects/",
+      "h1Count": 1,
+      "h1Text": [
+        "Projects"
+      ],
+      "headingOrder": [
+        "H1",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/talks/",
+      "h1Count": 1,
+      "h1Text": [
+        "Talks"
+      ],
+      "headingOrder": [
+        "H1",
+        "H2",
+        "H3",
+        "H2",
+        "H3"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/about/",
+      "h1Count": 1,
+      "h1Text": [
+        "About"
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    },
+    {
+      "scheme": "light",
+      "path": "/404.html",
+      "h1Count": 1,
+      "h1Text": [
+        "This page has no boundary."
+      ],
+      "headingOrder": [
+        "H1"
+      ],
+      "header": 1,
+      "navWithLabel": [
+        "Primary"
+      ],
+      "navWithoutLabel": 0,
+      "mainId": [
+        "main"
+      ],
+      "mainCount": 1,
+      "footer": 1,
+      "imgsMissingAlt": [],
+      "imgCount": 0,
+      "imgsMissingDims": [],
+      "svgsNotHidden": 0,
+      "svgCount": 8,
+      "toggleName": "Toggle colour theme",
+      "togglePressed": "true",
+      "skipLink": {
+        "href": "#main",
+        "text": "Skip to content"
+      },
+      "lang": "en",
+      "titleCount": 1,
+      "emptyLinks": 0,
+      "listInvalid": 0
+    }
+  ]
+}

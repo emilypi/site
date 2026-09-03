@@ -1,0 +1,340 @@
+{
+  "tabOrder": [
+    {
+      "tag": "a",
+      "cls": "skip-link",
+      "text": "Skip to content",
+      "href": "#main",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "wordmark",
+      "text": "∂cohomolo.gy",
+      "href": "/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "Writing",
+      "href": "/posts/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "Notes",
+      "href": "/notes/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "Projects",
+      "href": "/projects/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "Talks",
+      "href": "/talks/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "About",
+      "href": "/about/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "button",
+      "cls": "",
+      "text": "Toggle colour theme",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "#meta",
+      "href": "/tags/meta/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "",
+      "text": "#typesetting",
+      "href": "/tags/typesetting/",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "Headings",
+      "href": "#headings",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "A third-level heading",
+      "href": "#a-third-level-heading",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "A fourth-level heading",
+      "href": "#a-fourth-level-heading",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "Mathematics",
+      "href": "#mathematics",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "Code",
+      "href": "#code",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "pre",
+      "cls": "astro-code astro-code-themes github-light github-dark-dimmed",
+      "text": "data Tree a = Leaf | Node (Tree a) a (Tree",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "pre",
+      "cls": "astro-code astro-code-themes github-light github-dark-dimmed",
+      "text": "theorem add_comm' (a b : Nat) : a + b = b ",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "pre",
+      "cls": "astro-code astro-code-themes github-light github-dark-dimmed",
+      "text": "def value_iteration(states, actions, backu",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "pre",
+      "cls": "astro-code astro-code-themes github-light github-dark-dimmed",
+      "text": "npm run build npx serve dist",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "pre",
+      "cls": "astro-code astro-code-themes github-light github-dark-dimmed",
+      "text": "- toc: false + toc: true math: true",
+      "href": null,
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "Lists",
+      "href": "#lists",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    },
+    {
+      "tag": "a",
+      "cls": "heading-anchor",
+      "text": "Quotations",
+      "href": "#quotations",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(95, 227, 201)",
+      "outlineStyle": "solid"
+    }
+  ],
+  "focusRingMissing": [],
+  "theme_light": {
+    "scheme": "light",
+    "firstLoad": {
+      "dataTheme": null,
+      "bg": "#f7f4ec",
+      "bodyBg": "rgb(247, 244, 236)",
+      "storedTheme": null,
+      "ariaPressed": "true",
+      "codeColour": "rgb(36, 41, 46)"
+    },
+    "afterToggle": {
+      "dataTheme": "dark",
+      "bg": "#0b0d14",
+      "storedTheme": "dark",
+      "ariaPressed": "false",
+      "codeColour": "rgb(173, 186, 199)"
+    },
+    "attributeAtDomContentLoaded": "dark",
+    "themeScriptIsFirstInHead": true,
+    "afterReload": {
+      "dataTheme": "dark",
+      "bg": "#0b0d14",
+      "ariaPressed": "false"
+    }
+  },
+  "theme_dark": {
+    "scheme": "dark",
+    "firstLoad": {
+      "dataTheme": null,
+      "bg": "#0b0d14",
+      "bodyBg": "rgb(11, 13, 20)",
+      "storedTheme": null,
+      "ariaPressed": "false",
+      "codeColour": "rgb(173, 186, 199)"
+    },
+    "afterToggle": {
+      "dataTheme": "light",
+      "bg": "#f7f4ec",
+      "storedTheme": "light",
+      "ariaPressed": "true",
+      "codeColour": "rgb(36, 41, 46)"
+    },
+    "attributeAtDomContentLoaded": "light",
+    "themeScriptIsFirstInHead": true,
+    "afterReload": {
+      "dataTheme": "light",
+      "bg": "#f7f4ec",
+      "ariaPressed": "true"
+    }
+  },
+  "fonts": {
+    "requested": [
+      {
+        "url": "http://127.0.0.1:4321/_astro/jetbrains-mono-latin-wght-normal.B9CIFXIH.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/inter-latin-wght-normal.Dx4kXJAl.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/newsreader-latin-wght-italic.Bxi8ein9.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/KaTeX_Math-Italic.t53AETM-.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/KaTeX_Main-Regular.B22Nviop.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/newsreader-latin-wght-normal.CCVVNp6i.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:4321/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+        "status": 200
+      }
+    ],
+    "thirdParty": [],
+    "families": [
+      "Inter Variable|swap|loaded",
+      "Inter Variable|swap|unloaded",
+      "Inter Variable|swap|unloaded",
+      "Inter Variable|swap|unloaded",
+      "Inter Variable|swap|unloaded",
+      "Inter Variable|swap|unloaded",
+      "Inter Variable|swap|unloaded",
+      "JetBrains Mono Variable|swap|loaded",
+      "JetBrains Mono Variable|swap|unloaded",
+      "JetBrains Mono Variable|swap|unloaded",
+      "JetBrains Mono Variable|swap|unloaded",
+      "JetBrains Mono Variable|swap|unloaded",
+      "JetBrains Mono Variable|swap|unloaded",
+      "KaTeX_AMS|block|loaded",
+      "KaTeX_Caligraphic|block|unloaded",
+      "KaTeX_Caligraphic|block|unloaded",
+      "KaTeX_Fraktur|block|unloaded",
+      "KaTeX_Fraktur|block|unloaded",
+      "KaTeX_Main|block|loaded",
+      "KaTeX_Main|block|unloaded",
+      "KaTeX_Main|block|unloaded",
+      "KaTeX_Main|block|unloaded",
+      "KaTeX_Math|block|loaded",
+      "KaTeX_Math|block|unloaded",
+      "KaTeX_SansSerif|block|unloaded",
+      "KaTeX_SansSerif|block|unloaded",
+      "KaTeX_SansSerif|block|unloaded",
+      "KaTeX_Script|block|unloaded",
+      "KaTeX_Size1|block|loaded",
+      "KaTeX_Size2|block|loaded",
+      "KaTeX_Size3|block|unloaded",
+      "KaTeX_Size4|block|unloaded",
+      "KaTeX_Typewriter|block|unloaded",
+      "Newsreader Variable|swap|loaded",
+      "Newsreader Variable|swap|loaded",
+      "Newsreader Variable|swap|unloaded",
+      "Newsreader Variable|swap|unloaded",
+      "Newsreader Variable|swap|unloaded",
+      "Newsreader Variable|swap|unloaded"
+    ],
+    "computed": {
+      "body": "\"Inter Variable\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "h1": "\"Newsreader Variable\", \"Iowan Old Style\", Georgia, serif",
+      "code": "\"JetBrains Mono Variable\", ui-monospace, \"SF Mono\", Menlo, monospace"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+
+/**
+ * A captioned figure. Pass `src` for a raster or file-backed image, or omit it
+ * and place an inline SVG component in the slot so `currentColor` follows the
+ * theme (an `<img>` cannot inherit colour from the page).
+ */
+interface Props {
+  src?: ImageMetadata | string;
+  alt?: string;
+  caption?: string;
+  width?: number;
+}
+
+const { src, alt = '', caption, width } = Astro.props;
+const hasSlot = Astro.slots.has('default');
+---
+
+<figure>
+  {
+    src === undefined ? (
+      <div class="inline" role={alt ? 'img' : undefined} aria-label={alt || undefined}>
+        {hasSlot && <slot />}
+      </div>
+    ) : typeof src === 'string' ? (
+      <img src={src} alt={alt} width={width} loading="lazy" decoding="async" />
+    ) : (
+      <Image src={src} alt={alt} width={width} loading="lazy" decoding="async" />
+    )
+  }
+  {caption && <figcaption class="label">{caption}</figcaption>}
+</figure>
+
+<style>
+  figure {
+    margin-inline: 0;
+    text-align: center;
+  }
+
+  img {
+    margin-inline: auto;
+    border-radius: var(--radius-md);
+  }
+
+  .inline {
+    color: var(--color-text);
+  }
+
+  .inline :global(svg) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  figcaption {
+    margin-top: var(--space-3);
+    text-wrap: pretty;
+  }
+</style>

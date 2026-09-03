@@ -1,0 +1,97 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+  talk: CollectionEntry<'talks'>['data'];
+}
+
+const { talk } = Astro.props;
+const primary = talk.url ?? talk.slides ?? talk.video;
+const links = [
+  { label: 'paper', href: talk.url },
+  { label: 'slides', href: talk.slides },
+  { label: 'video', href: talk.video },
+].filter((link): link is { label: string; href: string } => Boolean(link.href));
+---
+
+<li class="talk">
+  <p class="label">{talk.kind}</p>
+  <h3>
+    {primary ? <a href={primary}>{talk.title}</a> : talk.title}
+  </h3>
+  <p class="meta">
+    <span>{talk.venue}</span>
+    <span aria-hidden="true">·</span>
+    <FormattedDate date={talk.date} format="short" />
+  </p>
+  {talk.coauthors.length > 0 && <p class="coauthors">with {talk.coauthors.join(', ')}</p>}
+  {
+    links.length > 0 && (
+      <p class="links">
+        {links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </p>
+    )
+  }
+</li>
+
+<style>
+  .talk {
+    display: grid;
+    gap: var(--space-2);
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .talk:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+  }
+
+  h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    color: var(--color-accent);
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-faint);
+  }
+
+  .coauthors {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .links {
+    display: flex;
+    gap: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    color: var(--color-accent-2);
+  }
+</style>

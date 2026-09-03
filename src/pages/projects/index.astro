@@ -1,0 +1,104 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+
+type Project = CollectionEntry<'projects'>;
+type Status = Project['data']['status'];
+
+const INTRO =
+  'Mostly Haskell, mostly on Hackage under the name topos — libraries that exist because I needed them once.';
+const DESCRIPTION =
+  'Open-source projects by Emily Pillmore: Haskell libraries on Hackage, research organisations, and reading collections.';
+
+/** Loudest first: what is moving, what is being built, what is kept, what is done. */
+const STATUS_ORDER = [
+  'active',
+  'wip',
+  'maintained',
+  'archived',
+] as const satisfies readonly Status[];
+
+const projects = await getCollection('projects');
+
+const groups = STATUS_ORDER.map((status) => ({
+  status,
+  entries: projects.filter((project) => project.data.status === status),
+})).filter((group) => group.entries.length > 0);
+---
+
+<BaseLayout title="Projects" description={DESCRIPTION}>
+  <div class="container page">
+    <header class="page-header">
+      <p class="label kind">§ projects</p>
+      <h1>Projects</h1>
+      <p class="intro">{INTRO}</p>
+    </header>
+
+    {
+      groups.length > 0 ? (
+        groups.map((group) => (
+          <section class="group">
+            <SectionHeading label={`§ ${group.status}`} />
+            <ul class="grid">
+              {group.entries.map((project) => (
+                <li>
+                  <ProjectCard project={project.data} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      ) : (
+        <div class="prose">
+          <p>Nothing here yet.</p>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .page-header {
+    max-width: var(--measure);
+    margin-bottom: var(--space-12);
+  }
+
+  .kind {
+    color: var(--color-accent-2);
+  }
+
+  h1 {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    letter-spacing: -0.015em;
+  }
+
+  .intro {
+    margin-top: var(--space-4);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  .group + .group {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-6);
+  }
+</style>

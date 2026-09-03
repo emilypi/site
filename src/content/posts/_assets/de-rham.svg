@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" role="img" aria-labelledby="dr-title dr-desc" fill="none" stroke="currentColor" stroke-width="1.5">
+  <title id="dr-title">The de Rham complex</title>
+  <desc id="dr-desc">Four spaces of differential forms, Omega zero through Omega three, joined left to right by maps each labelled d. A curved arrow spanning the first two maps, from Omega zero to Omega two, is labelled d composed with d equals zero.</desc>
+  <defs>
+    <marker id="dr-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor" stroke="none"/>
+    </marker>
+  </defs>
+  <g font-family="serif" fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="256" y="32" font-size="15">the de Rham complex</text>
+    <g font-size="19">
+      <text x="52" y="106">Ω<tspan font-size="12" dy="-8">0</tspan></text>
+      <text x="188" y="106">Ω<tspan font-size="12" dy="-8">1</tspan></text>
+      <text x="324" y="106">Ω<tspan font-size="12" dy="-8">2</tspan></text>
+      <text x="460" y="106">Ω<tspan font-size="12" dy="-8">3</tspan></text>
+    </g>
+  </g>
+  <g marker-end="url(#dr-arrow)" stroke-linecap="round">
+    <path d="M80 100 H160"/>
+    <path d="M216 100 H296"/>
+    <path d="M352 100 H432"/>
+    <path d="M52 132 C 52 185, 324 185, 324 132"/>
+  </g>
+  <g font-family="serif" fill="currentColor" stroke="none" text-anchor="middle">
+    <g font-size="15">
+      <text x="120" y="90">d</text>
+      <text x="256" y="90">d</text>
+      <text x="392" y="90">d</text>
+    </g>
+    <text x="188" y="153" font-size="14">d ∘ d = 0</text>
+  </g>
+</svg>

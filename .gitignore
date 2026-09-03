@@ -1,0 +1,47 @@
+# Build output and Astro's generated types/cache
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment files (none are needed to build the site; keep any local ones out)
+.env
+.env.*
+!.env.example
+
+# Logs and debug output from package managers and Node
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Caches and tool state
+.cache/
+.eslintcache
+*.tsbuildinfo
+.prettier-cache
+
+# Test and QA artefacts, if any are ever generated in the repo
+coverage/
+playwright-report/
+test-results/
+.lighthouseci/
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating systems
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini

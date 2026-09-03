@@ -1,0 +1,120 @@
+---
+import type { Note, Post } from '../lib/content';
+import { href } from '../lib/url';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+  entries: (Post | Note)[];
+  collection: 'posts' | 'notes';
+  showDescription?: boolean;
+}
+
+const { entries, collection, showDescription = false } = Astro.props;
+---
+
+{
+  entries.length > 0 && (
+    <ol class:list={['post-list', collection]}>
+      {entries.map((entry) => (
+        <li>
+          <a class="title" href={href(`/${collection}/${entry.id}`)}>
+            <span>{entry.data.title}</span>
+          </a>
+          <p class="date">
+            <FormattedDate date={entry.data.date} format="long" />
+          </p>
+          {showDescription && <p class="description">{entry.data.description}</p>}
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+<style>
+  .post-list > li {
+    display: grid;
+    gap: var(--space-2);
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .post-list > li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .post-list > li:last-child {
+    padding-bottom: 0;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    line-height: 1.25;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .notes .title {
+    font-size: var(--text-lg);
+  }
+
+  /* A hairline that grows out from the left edge rather than blinking on. */
+  .title > span {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    padding-bottom: 0.06em;
+    transition: background-size 260ms var(--ease-out);
+  }
+
+  .title:hover,
+  .title:focus-visible {
+    color: var(--color-accent);
+  }
+
+  .title:hover > span,
+  .title:focus-visible > span {
+    background-size: 100% 1px;
+  }
+
+  .date {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-label);
+    color: var(--color-text-faint);
+    white-space: nowrap;
+  }
+
+  .description {
+    max-width: var(--measure);
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  @media (min-width: 40rem) {
+    .post-list > li {
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      column-gap: var(--space-8);
+    }
+
+    .date {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+    }
+
+    .description {
+      grid-column: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .title > span {
+      transition: none;
+    }
+  }
+</style>

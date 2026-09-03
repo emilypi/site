@@ -1,0 +1,68 @@
+{
+  "origin": "http://127.0.0.1:4321",
+  "pagesVisited": 11,
+  "visited": [
+    {
+      "path": "/",
+      "status": 200,
+      "depth": 0
+    },
+    {
+      "path": "/posts/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/notes/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/projects/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/talks/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/rss.xml",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/posts/kitchen-sink/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/notes/what-notes-are-for/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "path": "/tags/meta/",
+      "status": 200,
+      "depth": 2
+    },
+    {
+      "path": "/tags/typesetting/",
+      "status": 200,
+      "depth": 2
+    }
+  ],
+  "badResponses": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "hostsContacted": [
+    "127.0.0.1:4321"
+  ],
+  "targetBlankWithoutNoopener": []
+}

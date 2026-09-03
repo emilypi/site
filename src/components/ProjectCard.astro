@@ -1,0 +1,114 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>['data'];
+}
+
+const { project } = Astro.props;
+const hackageUrl = project.hackage
+  ? `https://hackage.haskell.org/package/${project.hackage}`
+  : undefined;
+---
+
+<article class="card">
+  <h3>
+    <a href={project.url} class="name">{project.name}</a>
+  </h3>
+  <p class="description">{project.description}</p>
+  <footer>
+    <span class="role">{project.role}</span>
+    <span class:list={['status', project.status]}>{project.status}</span>
+    {hackageUrl && <a href={hackageUrl}>hackage</a>}
+    {project.repo && <a href={project.repo}>repo</a>}
+  </footer>
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    height: 100%;
+    padding: var(--space-6);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-lg);
+    transition:
+      border-color var(--dur) var(--ease-out),
+      transform var(--dur) var(--ease-out);
+  }
+
+  .card:hover {
+    border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-rule));
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+  }
+
+  .name {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .name:hover {
+    color: var(--color-accent);
+  }
+
+  .description {
+    flex: 1;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+    color: var(--color-text-faint);
+  }
+
+  .status {
+    padding: 0.1em 0.5em;
+    border: 1px solid var(--color-rule);
+    border-radius: 999px;
+    color: var(--color-text-muted);
+  }
+
+  .status.active,
+  .status.maintained {
+    color: var(--color-accent-2);
+    border-color: color-mix(in oklab, var(--color-accent-2) 40%, transparent);
+  }
+
+  .status.wip {
+    color: var(--color-warn);
+    border-color: color-mix(in oklab, var(--color-warn) 40%, transparent);
+  }
+
+  footer a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card:hover {
+      transform: none;
+      transition: border-color var(--dur) var(--ease-out);
+    }
+  }
+</style>

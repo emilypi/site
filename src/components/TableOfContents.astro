@@ -1,0 +1,88 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+  maxDepth?: 2 | 3;
+}
+
+interface TocEntry {
+  heading: MarkdownHeading;
+  children: MarkdownHeading[];
+}
+
+const { headings, maxDepth = 3 } = Astro.props;
+
+/* Flatten to two levels: h2 sections, each with its h3 subsections. Anything
+ * deeper, or an h3 that arrives before its first h2, is dropped rather than
+ * mis-nested. */
+const entries: TocEntry[] = [];
+for (const heading of headings) {
+  if (heading.depth > maxDepth) continue;
+  if (heading.depth <= 2) {
+    entries.push({ heading, children: [] });
+    continue;
+  }
+  entries.at(-1)?.children.push(heading);
+}
+---
+
+{
+  entries.length > 0 && (
+    <nav class="toc" aria-label="Contents">
+      <p class="label">Contents</p>
+      <ol>
+        {entries.map((entry) => (
+          <li>
+            <a href={`#${entry.heading.slug}`}>{entry.heading.text}</a>
+            {entry.children.length > 0 && (
+              <ol class="sub">
+                {entry.children.map((child) => (
+                  <li>
+                    <a href={`#${child.slug}`}>{child.text}</a>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}
+
+<style>
+  .toc {
+    font-size: var(--text-sm);
+    line-height: 1.45;
+  }
+
+  .toc > ol {
+    margin-top: var(--space-4);
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .sub {
+    margin-top: var(--space-2);
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--color-rule);
+  }
+
+  .sub a {
+    color: var(--color-text-faint);
+  }
+
+  a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    text-wrap: pretty;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+</style>

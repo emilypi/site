@@ -1,0 +1,223 @@
+---
+title: 'Typesetting notes: how math and code look here'
+description: A reference page that exercises every rendering feature this site has — display math, aligned environments, syntax highlighting in five languages, callouts, figures, footnotes, and the awkward cases like overflowing code.
+date: 2026-09-03
+tags: [meta, typesetting]
+draft: false
+math: true
+toc: true
+---
+
+import Callout from '../../components/Callout.astro';
+import Figure from '../../components/Figure.astro';
+import DeRham from './_assets/de-rham.svg';
+
+This page exists to be looked at rather than read. Everything below is here because I wanted to see how it renders before I found out the hard way in the middle of writing something I cared about. If you have arrived expecting an argument, there isn't one.
+
+It doubles as a reference for me. When I want to remember how a nested list behaves next to a display equation, this is the page I open.
+
+## Headings
+
+The page you are reading uses `h2` for its top-level sections, which is what feeds the table of contents. Below that:
+
+### A third-level heading
+
+Third-level headings subdivide a section without entering the contents listing. This is where most of the actual structure of a long post ends up living.
+
+#### A fourth-level heading
+
+Fourth-level headings exist. I try not to need them. When I do, they should look like a heading and not like bold text that lost its nerve.
+
+## Mathematics
+
+Inline math sets in the run of text, so a claim about $H^n(X;\mathbb{Z})$ or a stray $\gamma < 1$ keeps its line spacing rather than shoving the paragraph apart.
+
+Display math gets its own line and centres. Stokes' theorem, which is the observation that made me care about any of this:
+
+$$
+\int_M d\omega = \int_{\partial M} \omega
+$$
+
+Multi-line derivations use an aligned environment, breaking at the relation so the equals signs stack:
+
+$$
+\begin{aligned}
+\|T v - T w\|_\infty
+&= \max_s \Big| \max_a \big[ R(s,a) + \gamma \textstyle\sum_{s'} P(s'|s,a) v(s') \big] - \max_a \big[ \cdots w(s') \big] \Big| \\
+&\le \gamma \max_s \max_a \sum_{s'} P(s' \mid s,a) \, \big| v(s') - w(s') \big| \\
+&\le \gamma \, \|v - w\|_\infty
+\end{aligned}
+$$
+
+Everything is rendered by KaTeX at build time, so there is no layout shift while a script decides what the page looks like, and the math is still math if the JavaScript never arrives.
+
+## Code
+
+Five languages, because those are the ones I reach for.
+
+Haskell, the `Traversable` instance for a binary tree, which is the shortest honest example of why `Applicative` is the right abstraction for the job:
+
+```haskell
+data Tree a = Leaf | Node (Tree a) a (Tree a)
+
+instance Functor Tree where
+  fmap _ Leaf = Leaf
+  fmap f (Node l x r) = Node (fmap f l) (f x) (fmap f r)
+
+instance Foldable Tree where
+  foldMap _ Leaf = mempty
+  foldMap f (Node l x r) = foldMap f l <> f x <> foldMap f r
+
+instance Traversable Tree where
+  traverse _ Leaf = pure Leaf
+  traverse f (Node l x r) = Node <$> traverse f l <*> f x <*> traverse f r
+```
+
+Lean, where the proof is the program and `omega` does the arithmetic so I do not have to:
+
+```lean4
+theorem add_comm' (a b : Nat) : a + b = b + a := by
+  omega
+```
+
+Python, six lines of value iteration with everything interesting removed:
+
+```python
+def value_iteration(states, actions, backup, eps=1e-6):
+    v = {s: 0.0 for s in states}
+    while True:
+        nxt = {s: max(backup(s, a, v) for a in actions(s)) for s in states}
+        if max(abs(nxt[s] - v[s]) for s in states) < eps:
+            return nxt
+        v = nxt
+```
+
+Bash, two lines:
+
+```bash
+npm run build
+npx serve dist
+```
+
+And a diff, which needs its own colouring or it is unreadable:
+
+```diff
+-  toc: false
++  toc: true
+   math: true
+```
+
+## Lists
+
+An unordered list, for things with no order:
+
+- Sheaves, which are the machinery for gluing.
+- Cochains, which are what you glue.
+- The obstruction, which is what you are left holding.
+
+An ordered list, for things with one:
+
+1. Cover the space with patches.
+2. Write down something true on each patch.
+3. Compare on the overlaps.
+4. Measure the disagreement.
+
+A nested list, for things with structure:
+
+- Fixed-point theorems
+  - Banach — needs a metric, gives uniqueness and a rate
+  - Knaster–Tarski — needs an order, gives a lattice of fixed points
+    - and no rate whatsoever
+- Where they overlap
+  - The Bellman operator, which is both a contraction and monotone
+
+And a task list, because I keep one of these for every post:
+
+- [x] Check the contraction proof line by line
+- [x] Confirm the Haskell actually typechecks
+- [ ] Draw the figure of nested balls
+- [ ] Decide whether the coda is too much
+
+## Quotations
+
+Block quotes for other people's words:
+
+> Mathematics is the art of giving the same name to different things.
+>
+> — Henri Poincaré
+
+## Tables
+
+Tables take alignment per column — left, centred, and right:
+
+| Operator          |     Space      | Contraction modulus |
+| ----------------- | :------------: | ------------------: |
+| $T$ (optimality)  | $\mathbb{R}^S$ |            $\gamma$ |
+| $T^\pi$ (policy)  | $\mathbb{R}^S$ |            $\gamma$ |
+| $\Pi T^\pi$ (LFA) |   span of $\phi$   |  no general bound |
+
+Numbers should sit on the right so the digits line up. Anything else is a small daily cruelty.
+
+## Inline marks and footnotes
+
+Text can be **strong**, *emphasised*, ~~struck through~~, or set as inline `code`. Keys are marked up as <kbd>⌘</kbd> + <kbd>K</kbd> so they read as keys and not as code.
+
+Footnotes hang at the bottom of the page and link both ways[^1]. They are the right place for an aside that would derail a sentence[^2].
+
+[^1]: Clicking the marker takes you here; clicking the arrow takes you back to where you were reading.
+
+[^2]: For example: the sup norm is the natural one here because the Bellman operator's contraction constant is uniform over states. In a weighted $L^2$ norm the same operator has no such guarantee, which is the entire difficulty with function approximation. That did not belong in the paragraph.
+
+---
+
+That was a horizontal rule, which separates without announcing a new section.
+
+## Figures
+
+Figures drawn as SVG are placed inline in `currentColor`, so they follow the theme rather than sitting in a white box at night.
+
+<Figure
+  alt="Four spaces of differential forms, Omega zero through Omega three, connected left to right by arrows labelled d, with a curved arrow from Omega zero to Omega two labelled d composed with d equals zero."
+  caption="The de Rham complex. Each map takes a k-form to its exterior derivative, and the composite of any two consecutive maps is zero — which is what makes the quotient defining cohomology well posed."
+>
+  <DeRham width={640} />
+</Figure>
+
+## Callouts
+
+Four kinds, each for a different job.
+
+<Callout kind="note">
+  Notes hold context that is true and useful but not part of the argument. Provenance, a version number, a caveat about which GHC this was tested against.
+</Callout>
+
+<Callout kind="idea" title="A conjecture I have not checked">
+  Ideas are for the thing I suspect but have not earned. Marking them keeps me honest about the difference between a result and a hunch, which is a distinction that erodes silently if nothing is enforcing it.
+</Callout>
+
+<Callout kind="warn">
+  Warnings are for the places where the obvious thing is wrong. The stopping rule in value iteration is one: testing whether successive iterates have stopped moving is not the same as testing whether you are near the fixed point, and the two differ by a factor that blows up as the discount approaches one.
+</Callout>
+
+<Callout kind="math">
+  Math callouts hold a statement worth setting apart from the prose. A contraction on a complete metric space has exactly one fixed point, and iteration from any starting point converges to it geometrically.
+</Callout>
+
+## Overflow
+
+The hard case. Long unbroken tokens have nowhere to wrap, so they either scroll, ellipsize, or push the page sideways, and only the first of those is acceptable. A URL:
+
+https://compositionality.episciences.org/13530/pdf?utm_source=an-artificially-long-query-string&utm_medium=to-see-what-the-layout-does-when-a-token-refuses-to-break
+
+And a line of code that runs well past any sensible column limit:
+
+```haskell
+traverseTheWholeThing :: (Applicative f) => (a -> f b) -> Tree (Either String (Maybe [a])) -> f (Tree (Either String (Maybe [b])))
+traverseTheWholeThing f = traverse (traverse (traverse (traverse f)))
+```
+
+That should scroll within its own block and leave the body of the page alone.
+
+---
+
+If something above looks wrong, it is a bug in the theme rather than a choice, and I would like to know. The whole point of keeping this page published is that a rendering regression should be visible on one screen rather than discovered six months later in a post I have already sent to people.

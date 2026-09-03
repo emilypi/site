@@ -1,0 +1,39 @@
+Copyright (c) 2026 Emily Pillmore. All rights reserved.
+
+This repository contains the source and content of https://cohomolo.gy.
+
+1. Content
+
+   All written content, including posts, notes, the About page, images,
+   figures, and data files under src/content/ ("the Content"), is the
+   original work of Emily Pillmore and is protected by copyright.
+
+   You may read the Content on the published site and link to it. You may
+   quote brief excerpts for commentary, criticism, or review, with
+   attribution to Emily Pillmore and a link to the source page.
+
+   You may not, without prior written permission from the author:
+
+   - reproduce, republish, or redistribute the Content in whole or in
+     substantial part, in any medium;
+   - create derivative works from the Content, including translations
+     and adaptations;
+   - use the Content for commercial purposes;
+   - use the Content, or any part of it, to train, fine-tune, evaluate,
+     or otherwise develop machine learning or artificial intelligence
+     models, or include it in datasets assembled for those purposes.
+
+2. Code
+
+   The site's source code, configuration, styles, and scripts (everything
+   outside src/content/) is likewise copyright Emily Pillmore, all rights
+   reserved. It is published so the site can be built and inspected. No
+   license to copy, modify, or redistribute it is granted.
+
+3. Third-party material
+
+   Fonts, libraries, and other third-party components are the property
+   of their respective owners and are used under their own licenses,
+   which are unaffected by this notice.
+
+Permission requests: emilypi@cohomolo.gy

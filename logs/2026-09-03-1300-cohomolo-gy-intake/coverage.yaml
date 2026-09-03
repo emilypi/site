@@ -1,0 +1,104 @@
+# Coverage map — cohomolo-gy
+#
+# Schema: ~/llmephant/skills/interrogate/schema/coverage.md
+# Dimensions: ~/llmephant/skills/interrogate/dimensions.yaml
+
+session:
+  name: cohomolo-gy
+  started: 2026-09-03T13:00:00-06:00
+  profile: greenfield
+  rounds: 3
+  stopped_by: rule
+
+dimensions:
+  - id: problem
+    state: covered
+    source: asked
+    entries: [D-1]
+    note: Premise check offered four site shapes; writing-first blog chosen.
+
+  - id: users
+    state: covered
+    source: session
+    entries: [D-2]
+    note: Readers + author + six-month maintainer. Author ergonomics prioritised by the request itself.
+
+  - id: negative_scope
+    state: covered
+    source: asked
+    entries: [D-3, D-4]
+    note: Asked as an inclusion checklist (round 2) and re-confirmed in the closing playback (round 3). Seven exclusions.
+
+  - id: prior_art
+    state: covered
+    source: repo
+    entries: []
+    note: DNS probe, WebFetch of the domain, GitHub org/profile scans, ~/haskell listing. Nothing to replace.
+
+  - id: constraints
+    state: covered
+    source: asked
+    entries: [C-1, C-2, C-3, D-5, D-14]
+    note: Generator, hosting, repo dir asked; Node floor and markdown pipeline grounded against npm and docs.astro.build.
+
+  - id: failure_modes
+    state: covered
+    source: session
+    entries: []
+    note: Static site on Pages; atomic deploys; revert is the rollback. Not asked — derivable.
+
+  - id: done_criteria
+    state: covered
+    source: session
+    entries: [C-4]
+    note: Machine-checkable (check/build/link-lint) plus screenshot pass.
+
+  - id: deadline_drivers
+    state: covered
+    source: session
+    entries: []
+    note: "I'll commit to github when it's ready" — no date, no driver.
+
+  - id: decision_authority
+    state: covered
+    source: session
+    entries: []
+    note: Solo personal project; Emily is the sole approver.
+
+  - id: execution_mode
+    state: covered
+    source: asked
+    entries: [D-6]
+    note: User mid-turn message "use teams, coordinate effectively".
+
+  - id: interfaces
+    state: covered
+    source: asked
+    entries: [C-3]
+    note: GitHub Pages + registrar DNS.
+
+  - id: operations
+    state: covered
+    source: session
+    entries: []
+    note: Owner is Emily; upgrade path is npm.
+
+  - id: data
+    state: n-a
+    reason: No data stored, moved, or derived beyond the site's own content; theme preference in localStorage only.
+
+rounds_log:
+  - round: 1
+    asked: [problem/premise, constraints/generator, interfaces/hosting, problem/sections]
+    new_entries: 5
+  - round: 2
+    asked: [negative_scope/features, users/links, problem/bio, problem/seed-content]
+    new_entries: 6
+  - round: 3
+    asked: [playback, constraints/repo-dir, users/linkedin, problem/theme]
+    new_entries: 3
+
+stopping_rule:
+  all_terminal: true
+  closing_playback_clean: true
+  round_cap: 8

@@ -1,0 +1,42 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getPublishedPosts, type Post } from '../../lib/content';
+import { href } from '../../lib/url';
+
+/** A neighbouring post in date order, as `ArticleLayout` wants it. */
+interface AdjacentLink {
+  title: string;
+  href: string;
+}
+
+interface Props {
+  post: Post;
+  prev?: AdjacentLink;
+  next?: AdjacentLink;
+}
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+
+  // `getPublishedPosts` returns newest first, so the lower index is the newer
+  // post: `prev` walks towards the present, `next` towards the archive.
+  const adjacent = (index: number): AdjacentLink | undefined => {
+    if (index < 0 || index >= posts.length) return undefined;
+    const neighbour = posts[index];
+    return { title: neighbour.data.title, href: href(`/posts/${neighbour.id}`) };
+  };
+
+  return posts.map((post, index) => ({
+    params: { id: post.id },
+    props: { post, prev: adjacent(index - 1), next: adjacent(index + 1) },
+  }));
+}
+
+const { post, prev, next } = Astro.props;
+const { Content, headings } = await render(post);
+---
+
+<ArticleLayout entry={post} headings={headings} collection="posts" prev={prev} next={next}>
+  <Content />
+</ArticleLayout>

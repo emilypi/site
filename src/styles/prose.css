@@ -1,0 +1,366 @@
+/* Long-form reading surface. Everything markdown can emit gets a home here so
+ * that article bodies need no per-page styling. */
+
+.prose {
+  max-width: var(--measure);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  hanging-punctuation: first;
+  /* A bare URL is one unbreakable token; without this it widens the page on a
+   * narrow screen instead of wrapping. Code blocks scroll in their own box. */
+  overflow-wrap: break-word;
+}
+
+.prose > * + * {
+  margin-top: var(--space-6);
+}
+
+.prose p {
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------- headings --- */
+
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 2.2em;
+  margin-bottom: -0.4em;
+  text-wrap: balance;
+  scroll-margin-top: var(--space-8);
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  letter-spacing: -0.01em;
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.prose h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.prose h5,
+.prose h6 {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* rehype-autolink-headings wraps the heading text, so the anchor must be
+ * invisible until the reader goes looking for it. */
+.prose .heading-anchor {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose .heading-anchor::before {
+  content: '#';
+  position: absolute;
+  right: calc(100% + 0.35em);
+  color: var(--color-text-faint);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease-out);
+}
+
+.prose .heading-anchor:hover::before,
+.prose .heading-anchor:focus-visible::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------- links --- */
+
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: color-mix(in oklab, var(--color-accent) 45%, transparent);
+  transition: text-decoration-color var(--dur) var(--ease-out);
+}
+
+.prose a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+/* ------------------------------------------------------- inline emphasis --- */
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.prose mark {
+  background: var(--color-selection);
+  color: inherit;
+  padding: 0.05em 0.15em;
+  border-radius: var(--radius-sm);
+}
+
+.prose del {
+  color: var(--color-text-muted);
+}
+
+.prose abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+.prose kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: 0.15em 0.4em;
+  border: 1px solid var(--color-rule);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-elevated);
+}
+
+/* ------------------------------------------------------------- the lede --- */
+
+.prose .lede,
+.lede {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------- quotation --- */
+
+.prose blockquote {
+  border-left: 2px solid var(--color-accent-3);
+  padding-left: var(--space-4);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.prose blockquote > * + * {
+  margin-top: var(--space-4);
+}
+
+/* ----------------------------------------------------------------- code --- */
+
+.prose :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background: var(--color-bg-elevated);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-rule);
+  word-break: break-word;
+}
+
+.prose pre.astro-code {
+  position: relative;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  tab-size: 2;
+}
+
+.prose pre.astro-code code {
+  font-family: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.prose pre.astro-code[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.35em 0.7em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .prose pre.astro-code {
+    margin-inline: calc(var(--space-6) * -1);
+  }
+}
+
+/* ------------------------------------------------------------ mathematics --- */
+
+.prose .katex {
+  font-size: 1.05em;
+}
+
+.prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25em 0;
+}
+
+/* ----------------------------------------------------------------- lists --- */
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+
+.prose ul {
+  list-style: disc;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose li::marker {
+  color: var(--color-text-faint);
+}
+
+.prose li + li {
+  margin-top: var(--space-2);
+}
+
+.prose li > ul,
+.prose li > ol {
+  margin-top: var(--space-2);
+}
+
+.prose ul.contains-task-list {
+  list-style: none;
+  padding-left: 0.2em;
+}
+
+.prose .task-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.prose .task-list-item input[type='checkbox'] {
+  accent-color: var(--color-accent-2);
+  translate: 0 0.15em;
+}
+
+.prose dt {
+  font-weight: 600;
+}
+
+.prose dd {
+  margin-left: 0;
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--color-rule);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------------- tables --- */
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.prose th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: left;
+}
+
+.prose th,
+.prose td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+}
+
+.prose thead th {
+  border-bottom-color: var(--color-text-faint);
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------------------------------------------------------------- media --- */
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.prose figure {
+  margin-inline: 0;
+  text-align: center;
+}
+
+.prose figcaption {
+  margin-top: var(--space-3);
+  text-align: center;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  margin: var(--space-12) auto;
+  width: 33%;
+}
+
+/* ------------------------------------------------------------- footnotes --- */
+
+.prose .footnotes {
+  margin-top: var(--space-16);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.prose .footnotes h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.prose a[data-footnote-ref] {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  text-decoration: none;
+  padding-inline: 0.15em;
+}
+
+/* The back-link sits inside muted footnote prose, so colour alone would not
+ * separate it from the surrounding text; it keeps the underline. */
+.prose a[data-footnote-backref] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

@@ -1,0 +1,294 @@
+{
+  "structure": {
+    "katexDisplay": 2,
+    "katexInline": 13,
+    "katexErrors": 0,
+    "codeBlocks": [
+      {
+        "lang": "haskell",
+        "shikiSpans": 63,
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "lang": "lean4",
+        "shikiSpans": 5,
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "lang": "python",
+        "shikiSpans": 48,
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "lang": "bash",
+        "shikiSpans": 6,
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "lang": "diff",
+        "shikiSpans": 3,
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "lang": "haskell",
+        "shikiSpans": 29,
+        "overflowX": "auto",
+        "scrollable": true
+      }
+    ],
+    "footnotesSection": true,
+    "footnoteRefs": 2,
+    "footnoteBackrefs": 2,
+    "backrefDecoration": "underline",
+    "tables": 1,
+    "images": [
+      {
+        "src": "/_astro/de-rham.B9FdML51_Z1Wdf5N.svg",
+        "alt": "Four spaces of differential forms, Omega zero through Omega three, connected left to right by arrows labelled d, with a curved arrow from Omega zero to Omega two labelled d composed with d equals zero.",
+        "w": "520",
+        "h": "200"
+      }
+    ],
+    "figures": 1,
+    "figcaptions": [
+      "The de Rham complex. Each map takes a k-"
+    ],
+    "callouts": [
+      {
+        "classes": "callout note",
+        "label": "note"
+      },
+      {
+        "classes": "callout idea",
+        "label": "A conjecture I have not checked"
+      },
+      {
+        "classes": "callout warn",
+        "label": "warn"
+      },
+      {
+        "classes": "callout math",
+        "label": "math"
+      }
+    ],
+    "tocPresent": true,
+    "tocLinks": [
+      "#headings",
+      "#a-third-level-heading",
+      "#mathematics",
+      "#code",
+      "#lists",
+      "#quotations",
+      "#tables",
+      "#inline-marks-and-footnotes",
+      "#figures",
+      "#callouts",
+      "#overflow",
+      "#footnote-label"
+    ],
+    "tocTargetsResolve": [
+      {
+        "href": "#headings",
+        "resolves": true
+      },
+      {
+        "href": "#a-third-level-heading",
+        "resolves": true
+      },
+      {
+        "href": "#mathematics",
+        "resolves": true
+      },
+      {
+        "href": "#code",
+        "resolves": true
+      },
+      {
+        "href": "#lists",
+        "resolves": true
+      },
+      {
+        "href": "#quotations",
+        "resolves": true
+      },
+      {
+        "href": "#tables",
+        "resolves": true
+      },
+      {
+        "href": "#inline-marks-and-footnotes",
+        "resolves": true
+      },
+      {
+        "href": "#figures",
+        "resolves": true
+      },
+      {
+        "href": "#callouts",
+        "resolves": true
+      },
+      {
+        "href": "#overflow",
+        "resolves": true
+      },
+      {
+        "href": "#footnote-label",
+        "resolves": true
+      }
+    ],
+    "headingAnchors": 13,
+    "headingIds": [
+      "headings",
+      "a-third-level-heading",
+      "a-fourth-level-heading",
+      "mathematics",
+      "code",
+      "lists",
+      "quotations",
+      "tables",
+      "inline-marks-and-footnotes",
+      "figures",
+      "callouts",
+      "overflow",
+      "footnote-label"
+    ],
+    "taskListItems": 4,
+    "taskCheckboxes": [
+      {
+        "checked": true,
+        "disabled": true,
+        "ariaLabel": null
+      },
+      {
+        "checked": true,
+        "disabled": true,
+        "ariaLabel": null
+      },
+      {
+        "checked": false,
+        "disabled": true,
+        "ariaLabel": null
+      },
+      {
+        "checked": false,
+        "disabled": true,
+        "ariaLabel": null
+      }
+    ]
+  },
+  "desktopOverflow": {
+    "scrollWidth": 1280,
+    "innerWidth": 1280,
+    "overflows": false
+  },
+  "mobile": {
+    "scrollWidth": 434,
+    "innerWidth": 434,
+    "pageOverflows": false,
+    "elementsWiderThanViewport": [
+      {
+        "tag": "semantics",
+        "cls": "",
+        "width": 575,
+        "right": 770
+      },
+      {
+        "tag": "mtable",
+        "cls": "",
+        "width": 575,
+        "right": 770
+      },
+      {
+        "tag": "mtr",
+        "cls": "",
+        "width": 575,
+        "right": 770
+      },
+      {
+        "tag": "mtd",
+        "cls": "",
+        "width": 475,
+        "right": 770
+      },
+      {
+        "tag": "mstyle",
+        "cls": "",
+        "width": 460,
+        "right": 763
+      },
+      {
+        "tag": "mrow",
+        "cls": "",
+        "width": 460,
+        "right": 763
+      },
+      {
+        "tag": "mi",
+        "cls": "",
+        "width": 10,
+        "right": 446
+      },
+      {
+        "tag": "mo",
+        "cls": "",
+        "width": 6,
+        "right": 452
+      },
+      {
+        "tag": "mo",
+        "cls": "",
+        "width": 10,
+        "right": 466
+      },
+      {
+        "tag": "mi",
+        "cls": "",
+        "width": 9,
+        "right": 479
+      },
+      {
+        "tag": "mstyle",
+        "cls": "",
+        "width": 284,
+        "right": 763
+      },
+      {
+        "tag": "msub",
+        "cls": "",
+        "width": 25,
+        "right": 506
+      }
+    ],
+    "elementsWiderThanViewportCount": 275,
+    "table": {
+      "scrollWidth": 358,
+      "clientWidth": 358,
+      "parentTag": "article",
+      "parentOverflowX": "visible",
+      "parentScrollable": true
+    },
+    "katexDisplayScrollable": [
+      {
+        "overflowX": "auto",
+        "scrollable": false
+      },
+      {
+        "overflowX": "auto",
+        "scrollable": true
+      }
+    ],
+    "longestPreScrollable": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      true
+    ]
+  }
+}

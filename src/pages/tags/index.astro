@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllTags } from '../../lib/content';
+import { slugifyTag } from '../../lib/format';
+import { href } from '../../lib/url';
+
+const INTRO = 'Every subject the published writing touches, most used first.';
+const DESCRIPTION =
+  'Every tag across the writing and notes on cohomolo.gy, ordered by how often it is used.';
+
+// `getAllTags` counts published entries only, so a tag that survives on a draft
+// alone never reaches this page.
+const tags = await getAllTags();
+---
+
+<BaseLayout title="Tags" description={DESCRIPTION}>
+  <div class="container page">
+    <header class="page-header">
+      <p class="label kind">§ tags</p>
+      <h1>Tags</h1>
+      <p class="intro">{INTRO}</p>
+    </header>
+
+    {
+      tags.length > 0 ? (
+        <ul class="tag-cloud">
+          {tags.map(({ tag, count }) => (
+            <li>
+              <a href={href(`/tags/${slugifyTag(tag)}`)}>#{tag}</a>
+              <span class="label count">{count}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="prose">
+          <p>Nothing here yet.</p>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .page-header {
+    max-width: var(--measure);
+    margin-bottom: var(--space-12);
+  }
+
+  .kind {
+    color: var(--color-accent-2);
+  }
+
+  h1 {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    letter-spacing: -0.015em;
+  }
+
+  .intro {
+    margin-top: var(--space-4);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-8);
+    font-family: var(--font-mono);
+  }
+
+  .tag-cloud > li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+
+  .tag-cloud a {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .tag-cloud a:hover {
+    color: var(--color-accent);
+  }
+
+  .count {
+    color: var(--color-text-faint);
+  }
+</style>

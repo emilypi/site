@@ -1,0 +1,75 @@
+---
+type CalloutKind = 'note' | 'idea' | 'warn' | 'math' | 'aside';
+
+interface Props {
+  kind?: CalloutKind;
+  title?: string;
+}
+
+const { kind = 'note', title } = Astro.props;
+---
+
+<aside class:list={['callout', kind]}>
+  <p class="label">{title ?? kind}</p>
+  <div class="body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .callout {
+    --callout-colour: var(--color-accent);
+
+    margin-block: var(--space-8);
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-rule);
+    border-left: 2px solid var(--callout-colour);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  .idea {
+    --callout-colour: var(--color-accent-3);
+  }
+
+  .warn {
+    --callout-colour: var(--color-warn);
+  }
+
+  .math {
+    --callout-colour: var(--color-accent-2);
+  }
+
+  /* The aside keeps a neutral rule, but its label still has to be readable. */
+  .aside {
+    --callout-colour: var(--color-rule);
+  }
+
+  .aside .label {
+    color: var(--color-text-faint);
+  }
+
+  .label {
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--callout-colour);
+  }
+
+  .body :global(> * + *) {
+    margin-top: var(--space-4);
+  }
+
+  .body :global(> :first-child) {
+    margin-top: 0;
+  }
+
+  .body :global(> :last-child) {
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+interface Props {
+  label: string;
+  title?: string;
+  href?: string;
+  more?: string;
+}
+
+const { label, title, href, more } = Astro.props;
+---
+
+<header class="section-heading">
+  <div class="titles">
+    <p class="label">{label}</p>
+    {title && <h2>{title}</h2>}
+  </div>
+  {
+    more && href && (
+      <a class="more" href={href}>
+        {more}
+      </a>
+    )
+  }
+</header>
+
+<style>
+  .section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .titles > h2 {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+  }
+
+  .more {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-label);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .more:hover {
+    color: var(--color-accent-2);
+  }
+</style>

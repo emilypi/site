@@ -1,0 +1,116 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TalkItem from '../../components/TalkItem.astro';
+
+type Talk = CollectionEntry<'talks'>;
+
+const INTRO = 'Talks, papers, and workshops — what I have said in public and where.';
+const DESCRIPTION =
+  'Talks, papers, and workshops by Emily Pillmore on Haskell, category theory, and compositionality.';
+
+interface YearGroup {
+  year: number;
+  entries: Talk[];
+}
+
+/**
+ * Bucket talks by year, newest first, each bucket newest first within itself.
+ * Years are read in UTC to match `formatDate`.
+ */
+function groupByYear(entries: Talk[]): YearGroup[] {
+  const years = new Map<number, Talk[]>();
+
+  for (const entry of entries) {
+    const year = entry.data.date.getUTCFullYear();
+    const bucket = years.get(year);
+    if (bucket) bucket.push(entry);
+    else years.set(year, [entry]);
+  }
+
+  return [...years.entries()]
+    .map(([year, group]) => ({ year, entries: group }))
+    .sort((a, b) => b.year - a.year);
+}
+
+const talks = await getCollection('talks');
+const groups = groupByYear(
+  [...talks].sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+);
+---
+
+<BaseLayout title="Talks" description={DESCRIPTION}>
+  <div class="container page">
+    <header class="page-header">
+      <p class="label kind">§ talks</p>
+      <h1>Talks</h1>
+      <p class="intro">{INTRO}</p>
+    </header>
+
+    {
+      groups.length > 0 ? (
+        groups.map((group) => (
+          <section class="year">
+            <h2 class="label year-label">{group.year}</h2>
+            <ol class="talk-list">
+              {group.entries.map((talk) => (
+                <TalkItem talk={talk.data} />
+              ))}
+            </ol>
+          </section>
+        ))
+      ) : (
+        <div class="prose">
+          <p>Nothing here yet.</p>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .page-header {
+    max-width: var(--measure);
+    margin-bottom: var(--space-12);
+  }
+
+  .kind {
+    color: var(--color-accent-2);
+  }
+
+  h1 {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    letter-spacing: -0.015em;
+  }
+
+  .intro {
+    margin-top: var(--space-4);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    text-wrap: pretty;
+  }
+
+  .year + .year {
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .year-label {
+    margin-bottom: var(--space-6);
+    color: var(--color-text-faint);
+  }
+
+  .talk-list {
+    max-width: var(--measure);
+  }
+</style>

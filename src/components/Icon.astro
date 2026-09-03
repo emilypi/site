@@ -1,0 +1,39 @@
+---
+/**
+ * The site's small mark set, drawn inline so the icons inherit `currentColor`
+ * and cost no extra request. Brand marks are solid; the rest are hairline
+ * strokes tuned to sit at the same optical weight at 20px.
+ */
+import type { SiteLinkIcon } from '../site.config';
+
+interface Props {
+  name: SiteLinkIcon;
+  size?: number;
+}
+
+const { name, size = 20 } = Astro.props;
+
+const STROKE =
+  'fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"';
+
+const ICONS: Record<SiteLinkIcon, string> = {
+  github:
+    '<path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.23 0 4.63-2.81 5.65-5.49 5.95.43.37.82 1.1.82 2.22 0 1.6-.02 2.9-.02 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5Z"/>',
+  org: `<circle cx="12" cy="5.2" r="2.4" ${STROKE}/><circle cx="5.4" cy="18" r="2.4" ${STROKE}/><circle cx="18.6" cy="18" r="2.4" ${STROKE}/><path d="M10.7 7.4 6.7 15.8M13.3 7.4l4 8.4M7.8 18h8.4" ${STROKE}/>`,
+  hackage: `<path d="M8.8 4.8 17.4 19.2M13.4 12.4 6.6 19.2" ${STROKE}/>`,
+  linkedin:
+    '<path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5ZM3 9h4v12H3V9Zm6 0h3.8v1.64h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.75V21h-4v-5.82c0-1.39-.03-3.18-2-3.18-2 0-2.3 1.5-2.3 3.08V21H9V9Z"/>',
+  mail: `<rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.4" ${STROKE}/><path d="m3.4 7 8.6 6 8.6-6" ${STROKE}/>`,
+  rss: `<circle cx="5.6" cy="18.4" r="1.9" fill="currentColor"/><path d="M3.6 11.4a9 9 0 0 1 9 9M3.6 4.8a15.6 15.6 0 0 1 15.6 15.6" ${STROKE}/>`,
+};
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width={size}
+  height={size}
+  aria-hidden="true"
+  focusable="false"
+  set:html={ICONS[name]}
+/>

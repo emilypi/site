@@ -1,0 +1,192 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Constellation from '../components/Constellation.astro';
+import PostList from '../components/PostList.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { getPublishedNotes, getPublishedPosts } from '../lib/content';
+import { SITE } from '../site.config';
+
+const [allPosts, allNotes, allProjects] = await Promise.all([
+  getPublishedPosts(),
+  getPublishedNotes(),
+  getCollection('projects'),
+]);
+
+const posts = allPosts.slice(0, SITE.homepage.recentPosts);
+const notes = allNotes.slice(0, SITE.homepage.recentNotes);
+const projects = allProjects
+  .filter((project) => project.data.featured)
+  .slice(0, SITE.homepage.featuredProjects);
+---
+
+<BaseLayout title={SITE.title}>
+  <section class="hero">
+    <Constellation density="mid" />
+    <div class="container hero-inner">
+      <p class="label">{SITE.author.name}</p>
+      {/* keep in sync with SITE.author.bio */}
+      <h1>
+        Engineer and mathematician writing about <em>type theory</em>, <em>AI</em>, and <em
+          >the strange future</em
+        >.
+      </h1>
+      <p class="tagline">{SITE.tagline}</p>
+      <p class="jump">
+        <a href="/posts/">→ writing</a>
+        <a href="/about/">→ about</a>
+        <a href="/rss.xml">→ rss</a>
+      </p>
+    </div>
+  </section>
+
+  {
+    posts.length > 0 && (
+      <section class="band">
+        <div class="container">
+          <div class="band-inner">
+            <SectionHeading label="§ writing" href="/posts/" more="all writing →" />
+            <PostList entries={posts} collection="posts" showDescription />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    notes.length > 0 && (
+      <section class="band">
+        <div class="container">
+          <div class="band-inner">
+            <SectionHeading label="§ notes" href="/notes/" more="all notes →" />
+            <PostList entries={notes} collection="notes" />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    projects.length > 0 && (
+      <section class="band">
+        <div class="container">
+          <div class="band-inner">
+            <SectionHeading label="§ projects" href="/projects/" more="all projects →" />
+            <ul class="project-grid">
+              {projects.map((project) => (
+                <li>
+                  <ProjectCard project={project.data} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: var(--space-24) var(--space-12);
+  }
+
+  /* A faint dawn over the horizon, sitting behind the star field. */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(
+      60% 50% at 50% -10%,
+      color-mix(in oklab, var(--color-accent) 14%, transparent),
+      transparent 70%
+    );
+  }
+
+  .hero-inner {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  h1 {
+    max-width: 22ch;
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 400;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--color-accent-3);
+  }
+
+  .tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .jump a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .jump a:hover {
+    color: var(--color-accent-2);
+  }
+
+  .band {
+    padding-block: var(--space-12) var(--space-2);
+  }
+
+  /* The divider is a child of the container, so it lines up with the text
+   * rather than with the container's padding box. */
+  .band + .band .band-inner {
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .project-grid {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 48rem) {
+    .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .hero {
+      padding-block: var(--space-16) var(--space-8);
+    }
+
+    .band {
+      padding-block: var(--space-8) var(--space-2);
+    }
+
+    .band + .band .band-inner {
+      padding-top: var(--space-8);
+    }
+  }
+</style>

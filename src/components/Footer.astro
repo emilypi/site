@@ -1,0 +1,78 @@
+---
+import { SITE } from '../site.config';
+import Icon from './Icon.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container inner">
+    <ul class="links">
+      {
+        SITE.links.map((link) => (
+          <li>
+            <a href={link.href} rel={link.href.startsWith('http') ? 'me noopener' : undefined}>
+              <Icon name={link.icon} />
+              <span>{link.label}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="sign-off">∂² = 0</p>
+
+    <p class="colophon">© {year} {SITE.author.name}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-16);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .inner {
+    padding-block: var(--space-12) var(--space-16);
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3) var(--space-6);
+  }
+
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease-out);
+  }
+
+  .links a:hover {
+    color: var(--color-accent-2);
+  }
+
+  .sign-off {
+    margin-top: var(--space-12);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-text-faint);
+  }
+
+  .colophon {
+    margin-top: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-faint);
+  }
+</style>

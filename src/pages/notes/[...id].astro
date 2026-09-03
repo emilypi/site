@@ -1,0 +1,42 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getPublishedNotes, type Note } from '../../lib/content';
+import { href } from '../../lib/url';
+
+/** A neighbouring note in date order, as `ArticleLayout` wants it. */
+interface AdjacentLink {
+  title: string;
+  href: string;
+}
+
+interface Props {
+  note: Note;
+  prev?: AdjacentLink;
+  next?: AdjacentLink;
+}
+
+export async function getStaticPaths() {
+  const notes = await getPublishedNotes();
+
+  // `getPublishedNotes` returns newest first, so the lower index is the newer
+  // note: `prev` walks towards the present, `next` towards the archive.
+  const adjacent = (index: number): AdjacentLink | undefined => {
+    if (index < 0 || index >= notes.length) return undefined;
+    const neighbour = notes[index];
+    return { title: neighbour.data.title, href: href(`/notes/${neighbour.id}`) };
+  };
+
+  return notes.map((note, index) => ({
+    params: { id: note.id },
+    props: { note, prev: adjacent(index - 1), next: adjacent(index + 1) },
+  }));
+}
+
+const { note, prev, next } = Astro.props;
+const { Content, headings } = await render(note);
+---
+
+<ArticleLayout entry={note} headings={headings} collection="notes" prev={prev} next={next}>
+  <Content />
+</ArticleLayout>

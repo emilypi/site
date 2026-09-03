@@ -1,0 +1,116 @@
+# Projects shown on /projects/. Each item needs a unique `id`.
+#
+# `url` is the canonical landing page (Hackage where a package is published,
+# otherwise the repository); `repo` is always the GitHub source.
+
+- id: base64
+  name: base64
+  description: RFC 4648-compliant Base64 and Base64url for ByteString, Text, and their lazy and short variants. Faster than base64-bytestring, and it rejects encodings that do not round-trip.
+  url: https://hackage.haskell.org/package/base64
+  repo: https://github.com/emilypi/base64
+  hackage: base64
+  role: author
+  status: maintained
+  tags: [haskell, encoding]
+  featured: true
+
+- id: haskell-resources
+  name: haskell-resources
+  description: A curated list of links to the foundational Haskell papers, arranged by theme — monads and type classes, semantics, the STG machine, type systems, and where the sausage is made.
+  url: https://github.com/cohomolo-gy/haskell-resources
+  repo: https://github.com/cohomolo-gy/haskell-resources
+  role: author
+  status: maintained
+  tags: [haskell, resources]
+  featured: true
+
+- id: smash
+  name: smash
+  description: Smash products, wedge products, and other pointed stuff — the pointed analogues of the usual product and sum, with the instances you would want.
+  url: https://hackage.haskell.org/package/smash
+  repo: https://github.com/emilypi/smash
+  hackage: smash
+  role: author
+  status: maintained
+  tags: [haskell, category-theory]
+  featured: true
+
+- id: nonempty-vector
+  name: nonempty-vector
+  description: Non-empty vectors — the total counterparts to head, last, and foldr1, with emptiness ruled out by the type rather than by a comment.
+  url: https://hackage.haskell.org/package/nonempty-vector
+  repo: https://github.com/emilypi/nonempty-vector
+  hackage: nonempty-vector
+  role: author
+  status: maintained
+  tags: [haskell, data-structures]
+  featured: true
+
+- id: base16
+  name: base16
+  description: Fast RFC 4648-compliant Base16 encoding and decoding, with the same type coverage and validity checks as its base64 and base32 siblings.
+  url: https://hackage.haskell.org/package/base16
+  repo: https://github.com/emilypi/base16
+  hackage: base16
+  role: author
+  status: maintained
+  tags: [haskell, encoding]
+
+- id: base32
+  name: base32
+  description: RFC 4648-compliant Base32 encodings and decodings, including the hex alphabet, for ByteString and Text in all their variants.
+  url: https://hackage.haskell.org/package/base32
+  repo: https://github.com/emilypi/base32
+  hackage: base32
+  role: author
+  status: maintained
+  tags: [haskell, encoding]
+
+- id: group-theory
+  name: group-theory
+  description: The theory of groups, as a hierarchy of Haskell classes — magmas up through groups and abelian groups, with the free constructions and the laws written down.
+  url: https://hackage.haskell.org/package/group-theory
+  repo: https://github.com/emilypi/group-theory
+  hackage: group-theory
+  role: author
+  status: maintained
+  tags: [haskell, algebra]
+
+- id: vitrea
+  name: vitrea
+  description: Optics via the profunctor representation theorem — deriving lenses, prisms, and traversals from the representation rather than postulating them. Work in progress.
+  url: https://hackage.haskell.org/package/vitrea
+  repo: https://github.com/emilypi/vitrea
+  hackage: vitrea
+  role: author
+  status: wip
+  tags: [haskell, optics, category-theory]
+
+- id: optics-resources
+  name: optics-resources
+  description: Resources for the aspiring optician — van Laarhoven's blog, Kmett's history of lenses, and the categorical papers on profunctor optics, collected in one place.
+  url: https://github.com/cohomolo-gy/optics-resources
+  repo: https://github.com/cohomolo-gy/optics-resources
+  role: author
+  status: maintained
+  tags: [optics, resources, category-theory]
+
+- id: polytope
+  name: polytope
+  description: Zero to competency in LLM research and the associated *P problems and optimisation theory — a reading path through the mathematics under learning machines.
+  url: https://github.com/cohomolo-gy/polytope
+  repo: https://github.com/cohomolo-gy/polytope
+  role: author
+  status: active
+  tags: [ml, optimisation, resources]
+
+- id: lawvere
+  name: lawvere
+  description: The collected works of F. W. Lawvere, gathered so that they stop disappearing behind dead links.
+  url: https://github.com/cohomolo-gy/lawvere
+  repo: https://github.com/cohomolo-gy/lawvere
+  role: maintainer
+  # GitHub does not flag this repo as archived, but it has had no commits since
+  # 2021-05. Status set per the plan; flip to `maintained` if that is wrong.
+  status: archived
+  tags: [category-theory, resources]
