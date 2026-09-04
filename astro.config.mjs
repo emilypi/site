@@ -39,8 +39,16 @@ const fonts = [
     fallbacks: ['Iowan Old Style', 'Georgia', 'serif'],
     options: {
       variants: [
-        { src: [fontsource('newsreader', 'newsreader-latin-wght-normal.woff2')], weight: '200 800', style: 'normal' },
-        { src: [fontsource('newsreader', 'newsreader-latin-wght-italic.woff2')], weight: '200 800', style: 'italic' },
+        {
+          src: [fontsource('newsreader', 'newsreader-latin-wght-normal.woff2')],
+          weight: '200 800',
+          style: 'normal',
+        },
+        {
+          src: [fontsource('newsreader', 'newsreader-latin-wght-italic.woff2')],
+          weight: '200 800',
+          style: 'italic',
+        },
       ],
     },
   },
@@ -51,8 +59,16 @@ const fonts = [
     fallbacks: ['system-ui', 'sans-serif'],
     options: {
       variants: [
-        { src: [fontsource('inter', 'inter-latin-wght-normal.woff2')], weight: '100 900', style: 'normal' },
-        { src: [fontsource('inter', 'inter-latin-wght-italic.woff2')], weight: '100 900', style: 'italic' },
+        {
+          src: [fontsource('inter', 'inter-latin-wght-normal.woff2')],
+          weight: '100 900',
+          style: 'normal',
+        },
+        {
+          src: [fontsource('inter', 'inter-latin-wght-italic.woff2')],
+          weight: '100 900',
+          style: 'italic',
+        },
       ],
     },
   },
@@ -63,7 +79,11 @@ const fonts = [
     fallbacks: ['ui-monospace', 'Menlo', 'monospace'],
     options: {
       variants: [
-        { src: [fontsource('jetbrains-mono', 'jetbrains-mono-latin-wght-normal.woff2')], weight: '100 800', style: 'normal' },
+        {
+          src: [fontsource('jetbrains-mono', 'jetbrains-mono-latin-wght-normal.woff2')],
+          weight: '100 800',
+          style: 'normal',
+        },
       ],
     },
   },

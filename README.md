@@ -26,7 +26,7 @@ git add . && git commit -m "..." && git push   # pushing to main deploys
 - **Shiki** — code blocks get accurate, theme-aware syntax highlighting without shipping a highlighter to the browser.
 - **@astrojs/rss** and **@astrojs/sitemap** — the feed and sitemap are generated from the same content collections, so they can't drift from what's actually on the site.
 - **satori** — Open Graph card images render from real content at build time, not a static placeholder.
-- **GitHub Pages** — free static hosting under a custom domain, with no server to keep alive.
+- **GitHub Pages** or **Cloudflare Workers** (static assets) — free static hosting under a custom domain, with no server to keep alive; see `docs/DEPLOY.md`.
 
 The whole stack favours long-term maintainability over cleverness: plain CSS (no preprocessor, no utility framework), and zero client-side JavaScript except the theme toggle.
 
@@ -51,19 +51,20 @@ src/
 
 ## Scripts
 
-| Script         | Command                                                | What it does                                                         |
-| -------------- | ------------------------------------------------------ | -------------------------------------------------------------------- |
-| `dev`          | `astro dev`                                            | Local dev server with live reload; drafts are visible.               |
-| `build`        | `astro build`                                          | Build the static site to `dist/`; drafts are excluded.               |
-| `preview`      | `astro preview`                                        | Serve the built `dist/` locally, as it appears in production.        |
-| `check`        | `astro check`                                          | Type-check `.astro` files and validate content frontmatter.          |
-| `format`       | `prettier --write .`                                   | Format the whole repo.                                               |
-| `format:check` | `prettier --check .`                                   | Check formatting without writing.                                    |
-| `lint:links`   | `node scripts/check-links.mjs dist`                    | Crawl the built `dist/` and fail on any dangling internal link.      |
-| `new:post`     | `node scripts/new.mjs post`                            | Scaffold a new post from the template and print its path.            |
-| `new:note`     | `node scripts/new.mjs note`                            | Scaffold a new note from the template and print its path.            |
-| `og:default`   | `node scripts/og-default.mjs`                          | Regenerate the default Open Graph image.                             |
-| `verify`       | `npm run check && npm run build && npm run lint:links` | Type-check, build, and link-check in sequence — the pre-deploy gate. |
+| Script         | Command                                                | What it does                                                             |
+| -------------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `dev`          | `astro dev`                                            | Local dev server with live reload; drafts are visible.                   |
+| `build`        | `astro build`                                          | Build the static site to `dist/`; drafts are excluded.                   |
+| `preview`      | `astro preview`                                        | Serve the built `dist/` locally, as it appears in production.            |
+| `check`        | `astro check`                                          | Type-check `.astro` files and validate content frontmatter.              |
+| `format`       | `prettier --write .`                                   | Format the whole repo.                                                   |
+| `format:check` | `prettier --check .`                                   | Check formatting without writing.                                        |
+| `lint:links`   | `node scripts/check-links.mjs dist`                    | Crawl the built `dist/` and fail on any dangling internal link.          |
+| `new:post`     | `node scripts/new.mjs post`                            | Scaffold a new post from the template and print its path.                |
+| `new:note`     | `node scripts/new.mjs note`                            | Scaffold a new note from the template and print its path.                |
+| `og:default`   | `node scripts/og-default.mjs`                          | Regenerate the default Open Graph image.                                 |
+| `verify`       | `npm run check && npm run build && npm run lint:links` | Type-check, build, and link-check in sequence — the pre-deploy gate.     |
+| `deploy`       | `npm run build && wrangler deploy`                     | Build, then upload `dist/` to Cloudflare Workers (see `docs/DEPLOY.md`). |
 
 ## Editing
 

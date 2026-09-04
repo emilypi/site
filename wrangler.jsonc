@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers, static assets only: `npm run deploy` builds dist/ and uploads it.
+  // Worker names allow lowercase letters, digits, and dashes, so the dot in the
+  // domain cannot appear here. See docs/DEPLOY.md.
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cohomolo-gy",
+  "compatibility_date": "2026-09-03",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+}
