@@ -15,9 +15,11 @@ One-time setup:
 
 1. `npx wrangler login` and follow the browser prompt.
 2. `npm run deploy` — this runs `astro build` and then `wrangler deploy`, and prints a `*.workers.dev` URL. Check the site there.
-3. Add the domain: in the Cloudflare dashboard open the Worker → **Settings → Domains & Routes → Add → Custom domain** and enter `cohomolo.gy`. The zone must be on your Cloudflare account; Cloudflare then creates the DNS records and certificate itself, so no manual `A`/`AAAA` records are needed.
+3. Add the domain: `wrangler.jsonc` declares Worker **routes** for `cohomolo.gy/*` and `www.cohomolo.gy/*` on the `cohomolo.gy` zone, so `wrangler deploy` attaches them. Routes work on top of the zone's existing proxied (orange-cloud) DNS records: the Worker answers every matching request, so whatever the records point at is never contacted. The zone must be on your Cloudflare account. (A Cloudflare *custom domain* would also work, but it refuses to attach while any `A`/`AAAA`/`CNAME` record exists on the hostname, error code 100117, and wrangler's OAuth token cannot edit DNS records to clear them.)
 
-Every later release is just `npm run deploy`. There is no `wrangler build` command: `astro build` produces the site and `wrangler deploy` uploads it. To validate the configuration without uploading, run `npx wrangler deploy --dry-run`. To preview the built site exactly as the Worker will serve it, `npm run build && npx wrangler dev`.
+Every later release is just `npm run deploy`.
+
+HTTP→HTTPS redirection is a zone setting, not part of the Worker: turn on **SSL/TLS → Edge Certificates → Always Use HTTPS** in the dashboard. There is no `wrangler build` command: `astro build` produces the site and `wrangler deploy` uploads it. To validate the configuration without uploading, run `npx wrangler deploy --dry-run`. To preview the built site exactly as the Worker will serve it, `npm run build && npx wrangler dev`.
 
 ## GitHub Pages
 

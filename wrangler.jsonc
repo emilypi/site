@@ -5,6 +5,14 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "cohomolo-gy",
   "compatibility_date": "2026-09-03",
+  "workers_dev": true,
+  // Serve the site at the apex domain. A route (not a custom domain) is used because it
+  // works on top of the zone's existing proxied DNS records; the Worker answers every
+  // request so the record's origin is never contacted.
+  "routes": [
+    { "pattern": "cohomolo.gy/*", "zone_name": "cohomolo.gy" },
+    { "pattern": "www.cohomolo.gy/*", "zone_name": "cohomolo.gy" },
+  ],
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
